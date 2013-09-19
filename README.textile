@@ -13,6 +13,14 @@ Add it to your Rails application Gemfile:
 
 <pre>
 group :development do
+  gem 'rails_layout'
+end
+</pre>
+
+If you want to use a newer unreleased version from GitHub:
+
+<pre>
+group :development do
   gem 'rails_layout', github: 'RailsApps/rails_layout'
 end
 </pre>
