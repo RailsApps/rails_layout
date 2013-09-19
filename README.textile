@@ -9,7 +9,7 @@ The Rails Layout gem generates application layout files suitable for use with th
 
 h2. Installation
 
-Add it your application Gemfile:
+Add it to your Rails application Gemfile:
 
 <pre>
 group :development do
@@ -21,14 +21,6 @@ Use Bundler to install the gem:
 
 <pre>
 $ bundle install
-</pre>
-
-h2. Help
-
-To see help messages:
-
-<pre>
-$ rails generate layout --help
 </pre>
 
 h2. Generating Layouts
@@ -44,6 +36,14 @@ Creates files:
 * app/views/layouts/application.html.erb
 * app/views/layouts/_messages.html.erb
 * app/views/layouts/_navigation.html.erb
+
+h2. Help
+
+To see help messages:
+
+<pre>
+$ rails generate layout --help
+</pre>
 
 h2. Issues
 
