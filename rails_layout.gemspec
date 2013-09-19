@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = RailsLayout::VERSION
   spec.authors       = ["Daniel Kehoe"]
   spec.email         = ["daniel@danielkehoe.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Generates Rails application layout files for use with various front-end frameworks.}
+  spec.summary       = %q{Rails generator creates application layout files for Twitter Bootstrap and other frameworks.}
+  spec.homepage      = "http://github.com/RailsApps/rails_layout/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
