@@ -3,6 +3,7 @@ h1. CHANGELOG
 h2. 0.1.2 September 20, 2013
 
 * add simple layout files
+* add missing turbolinks attributes
 
 h2. 0.1.1 September 19, 2013
 
