@@ -4,7 +4,7 @@ module Layout
   module Generators
     class LayoutGenerator < ::Rails::Generators::Base
       source_root File.expand_path("../templates", __FILE__)
-      argument :framework_name, :type => :string, :default => "bootstrap2"
+      argument :framework_name, :type => :string, :default => "simple"
 
       attr_reader :app_name
 
