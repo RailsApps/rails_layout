@@ -19,6 +19,15 @@ module Layout
         copy_file "#{framework_name}-navigation.html.#{ext}", "app/views/layouts/_navigation.html.#{ext}"
       end
 
+      # Add a simple stylesheet if there is no front-end framework
+      def simple_css
+        if framework_name == 'simple'
+          copy_file 'simple.css', 'app/assets/stylesheets/simple.css'
+        else
+          remove_file 'app/assets/stylesheets/simple.css'
+        end
+      end
+
       # If 'About' or 'Contact' views exist in known locations, add navigation links
       def add_navigation_links
         # not yet accommodating Haml and Slim (we'll need different substitutions)
