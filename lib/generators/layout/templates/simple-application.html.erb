@@ -2,20 +2,20 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "<%= app_name.underscore.titleize %>" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "<%= app_name.underscore.titleize %>" %>">
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
+    <title><%%= content_for?(:title) ? yield(:title) : "<%= app_name.underscore.titleize %>" %></title>
+    <meta name="description" content="<%%= content_for?(:description) ? yield(:description) : "<%= app_name.underscore.titleize %>" %>">
+    <%%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%%= csrf_meta_tags %>
   </head>
   <body>
     <div id="container">
       <header>
-        <%= render 'layouts/navigation' %>
-        <%= render 'layouts/messages' %>
+        <%%= render 'layouts/navigation' %>
+        <%%= render 'layouts/messages' %>
       </header>
       <main role="main">
-        <%= yield %>
+        <%%= yield %>
       </main>
       <footer>
       </footer>
