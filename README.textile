@@ -2,17 +2,21 @@ h1. !http://railsapps.github.io/images/rails-36x36.jpg(Rails Layout Gem)! Rails 
 
 Rails Layout is a utility gem you can use during development to set up a default application layout with partials for Rails flash messages and navigation links. It is a Rails generator that you add to your Rails application Gemfile.
 
+You can generate layout files suitable for use with the following front-end frameworks:
+
+* @simple@ - simple layout
+* @bootstrap2@ - Twitter Bootstrap 2.3
+* (more to come)
+
 The Rails Layout gem generates application layout files:
 
 * app/views/layouts/application.html.erb
 * app/views/layouts/_messages.html.erb
 * app/views/layouts/_navigation.html.erb
 
-There are options to generate layout files suitable for use with the following front-end frameworks:
+Additionally, when the @simple@ option is selected:
 
-* @simple@ - simple layout
-* @bootstrap2@ - Twitter Bootstrap 2.3
-* (more to come)
+  * app/assets/stylesheets/simple.css
 
 h2. Installation
 
