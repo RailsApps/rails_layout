@@ -1,8 +1,14 @@
 Description:
     Creates Rails layout files suitable for various front-end frameworks.
 
-Example:
-    rails generate layout bootstrap2
+Creates files:
+  * app/views/layouts/application.html.erb
+  * app/views/layouts/_messages.html.erb
+  * app/views/layouts/_navigation.html.erb
+  * app/assets/stylesheets/simple.css (only for simple option)
 
-    Create layout files suitable for Twitter Bootstrap 2.3:
-        app/views/layouts/application.html.erb
+Create simple layout files when no front-end framework is used:
+  rails generate layout simple
+
+Create layout files suitable for Twitter Bootstrap 2.3:
+  rails generate layout bootstrap2
