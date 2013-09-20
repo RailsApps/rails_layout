@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h2. 0.1.1 September 19, 2013
+
+* add navigation links for 'About' or 'Contact' if view files exist in expected locations
+
 h2. 0.1.0 September 19, 2013
 
 * support for Twitter Bootstrap 2.3
