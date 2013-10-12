@@ -10,6 +10,7 @@ module Layout
 
       # Create an application layout file with partials for messages and navigation
       def generate_layout
+        puts 'generating layout'
         app = ::Rails.application
         @app_name = app.class.to_s.split("::").first
         ext = app.config.generators.options[:rails][:template_engine] || :erb
