@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h2. 0.1.5 October 12, 2013
+
+* support for Twitter Bootstrap 3.0
+
 h2. 0.1.4 September 20, 2013
 
 * add simple stylesheet if there is no front-end framework
