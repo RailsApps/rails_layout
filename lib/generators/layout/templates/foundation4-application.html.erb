@@ -5,23 +5,29 @@
     <title><%%= content_for?(:title) ? yield(:title) : "<%= app_name.underscore.titleize %>" %></title>
     <meta name="description" content="<%%= content_for?(:description) ? yield(:description) : "<%= app_name.underscore.titleize %>" %>">
     <%%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%%# Modernizr is required for Zurb Foundation 4 %>
+    <%%= javascript_include_tag "vendor/custom.modernizr" %>
     <%%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%%= csrf_meta_tags %>
   </head>
   <body>
-    <%%# application layout styled for Twitter Bootstrap 2.3 %>
-    <header class="navbar navbar-fixed-top">
-      <nav class="navbar-inner">
-        <div class="container">
-          <%%= render 'layouts/navigation' %>
-        </div>
-      </nav>
+    <%%# application layout styled for Zurb Foundation 4 %>
+    <header>
+      <nav class="top-bar">
+        <ul class="title-area">
+          <li class="name"><!-- add site name or logo here --></li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+      <section class="top-bar-section">
+        <%%= render 'layouts/navigation' %>
+      </section>
+    </nav>
     </header>
     <main role="main">
       <div class="container">
         <div class="content">
-           <div class="row">
-            <div class="span12">
+          <div class="row">
+            <div class="twelve columns">
               <%%= render 'layouts/messages' %>
               <%%= yield %>
             </div>
