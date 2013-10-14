@@ -13,7 +13,7 @@ module Layout
         app = ::Rails.application
         @app_name = app.class.to_s.split("::").first
         ext = app.config.generators.options[:rails][:template_engine] || :erb
-        # so far, I've only got templates for ERB, but Haml and Slim could be added
+        # I've got templates for ERB and Haml (but not Slim)
         template "#{framework_name}-application.html.#{ext}", "app/views/layouts/application.html.#{ext}"
         copy_file "#{framework_name}-messages.html.#{ext}", "app/views/layouts/_messages.html.#{ext}"
         copy_file "#{framework_name}-navigation.html.#{ext}", "app/views/layouts/_navigation.html.#{ext}"
@@ -30,12 +30,18 @@ module Layout
 
       # If 'About' or 'Contact' views exist in known locations, add navigation links
       def add_navigation_links
-        # not yet accommodating Haml and Slim (we'll need different substitutions)
+        # not yet accommodating Slim (we'll need different substitutions)
         if File.exists?('app/views/pages/about.html.erb')
-          insert_into_file 'app/views/layouts/_navigation.html.erb', "\n  <li><%= link_to 'About', page_path('about') %></li>", :before => "\n</ul>"
+          insert_into_file 'app/views/layouts/_navigation.html.erb', "\n  %li= link_to 'About', page_path('about') %></li>", :before => "\n</ul>"
         end
         if File.exists?('app/views/contacts/new.html.erb')
-          insert_into_file 'app/views/layouts/_navigation.html.erb', "\n  <li><%= link_to 'Contact', new_contact_path %></li>", :before => "\n</ul>"
+          insert_into_file 'app/views/layouts/_navigation.html.erb', "\n  %li= link_to 'Contact', new_contact_path %></li>", :before => "\n</ul>"
+        end
+        if File.exists?('app/views/contacts/new.html.haml')
+          insert_into_file 'app/views/layouts/_navigation.html.haml', "\n  %li= link_to 'Contact', new_contact_path", :after => "root_path"
+        end
+        if File.exists?('app/views/pages/about.html.haml')
+          insert_into_file 'app/views/layouts/_navigation.html.haml', "\n  %li= link_to 'About', page_path('about')", :after => "root_path"
         end
       end
 

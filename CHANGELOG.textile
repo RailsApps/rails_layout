@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h2. 0.1.7 October 13, 2013
+
+* support for Haml markup
+
 h2. 0.1.6 October 13, 2013
 
 * support for Zurb Foundation 4.0
