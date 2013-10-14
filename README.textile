@@ -29,9 +29,13 @@ If you are using ERB for Rails views, the RailsLayout gem will generate ERB file
 
 If you are using Haml, the RailsLayout gem will generate Haml files instead.
 
+h4. Rails Composer
+
+The "Rails Composer":http://railsapps.github.io/rails-composer/ tool, an application template used to create starter applications, uses the RailsLayout gem to generate the layout files used in various starter applications. You can use Rails Composer to generate entire applications.
+
 h2. Usage Example
 
-To see how the RailsLayout gem is used in an application, see the "Learn Rails":https://github.com/RailsApps/learn-rails example application that is described in the book "Learn Ruby on Rails":http://learn-rails.com/learn-ruby-on-rails.html.
+To see how the generated files from the RailsLayout gem are used, see the "Learn Rails":https://github.com/RailsApps/learn-rails example application that is described in the book "Learn Ruby on Rails":http://learn-rails.com/learn-ruby-on-rails.html.
 
 !http://railsapps.github.io/images/learn-rails-cover-130x161.jpg(Learn Ruby on Rails)!:http://learn-rails.com/learn-ruby-on-rails.html
 
