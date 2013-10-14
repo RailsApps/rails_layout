@@ -2,12 +2,16 @@ h1. !http://railsapps.github.io/images/rails-36x36.jpg(RailsLayout Gem)! RailsLa
 
 RailsLayout is a utility gem to use during development to set up a default application layout with partials for Rails flash messages and navigation links. It is a Rails generator that you add to your Rails application Gemfile.
 
+h4. Supported Frameworks
+
 You can generate layout files suitable for use with the following front-end frameworks:
 
 * @simple@ - simple layout
 * @bootstrap2@ - Twitter Bootstrap 2.3
 * @bootstrap3@ - Twitter Bootstrap 3.0
 * @foundation4@ - Zurb Foundation 4.0
+
+h4. Generated Files
 
 The RailsLayout gem generates application layout files:
 
@@ -18,6 +22,12 @@ The RailsLayout gem generates application layout files:
 Additionally, when the @simple@ option is selected:
 
 * app/assets/stylesheets/simple.css
+
+h4. Support for ERB or Haml
+
+If you are using ERB for Rails views, the RailsLayout gem will generate ERB files (as shown above).
+
+If you are using Haml, the RailsLayout gem will generate Haml files instead.
 
 h2. Usage Example
 
