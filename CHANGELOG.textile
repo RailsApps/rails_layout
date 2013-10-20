@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h2. 0.1.9 October 20, 2013
+
+* use class instead of id for simple CSS flash messages
+
 h2. 0.1.8 October 19, 2013
 
 * fix navigation

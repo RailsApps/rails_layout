@@ -20,7 +20,7 @@ ul.nav li a {
   text-decoration: none;
   text-shadow: 0 1px 0 white;
 }
-#flash_notice, #flash_alert {
+.flash_notice, .flash_alert {
   padding: 8px 35px 8px 14px;
   margin-bottom: 20px;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -32,12 +32,12 @@ ul.nav li a {
   font-size: 14px;
   line-height: 20px;
 }
-#flash_notice {
+.flash_notice {
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #468847;
 }
-#flash_alert {
+.flash_alert {
   background-color: #f2dede;
   border-color: #eed3d7;
   color: #b94a48;
