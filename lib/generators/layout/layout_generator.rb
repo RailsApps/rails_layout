@@ -32,10 +32,10 @@ module Layout
       def add_navigation_links
         # not yet accommodating Slim (we'll need different substitutions)
         if File.exists?('app/views/pages/about.html.erb')
-          insert_into_file 'app/views/layouts/_navigation.html.erb', "\n  %li= link_to 'About', page_path('about') %></li>", :before => "\n</ul>"
+          insert_into_file 'app/views/layouts/_navigation.html.erb', "\n  <li><%= link_to 'About', page_path('about') %></li>", :before => "\n</ul>"
         end
         if File.exists?('app/views/contacts/new.html.erb')
-          insert_into_file 'app/views/layouts/_navigation.html.erb', "\n  %li= link_to 'Contact', new_contact_path %></li>", :before => "\n</ul>"
+          insert_into_file 'app/views/layouts/_navigation.html.erb', "\n  <li><%= link_to 'Contact', new_contact_path %></li>", :before => "\n</ul>"
         end
         if File.exists?('app/views/contacts/new.html.haml')
           insert_into_file 'app/views/layouts/_navigation.html.haml', "\n  %li= link_to 'Contact', new_contact_path", :after => "root_path"
