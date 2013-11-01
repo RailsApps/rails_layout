@@ -8,6 +8,23 @@ module Layout
 
       attr_reader :app_name
 
+      # Install the desired framework
+      def install_framework
+        remove_file 'app/assets/stylesheets/application.css'
+        copy_file 'application.css.scss', 'app/assets/stylesheets/application.css.scss'
+        case framework_name
+          when 'bootstrap2'
+            copy_file 'bootstrap2_and_overrides.css.scss', 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
+            copy_file 'bootstrap-application.js', 'app/assets/javascripts/application.js'
+          when 'bootstrap3'
+            copy_file 'bootstrap3_and_overrides.css.scss', 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
+            copy_file 'bootstrap-application.js', 'app/assets/javascripts/application.js'
+          when 'foundation4'
+            copy_file 'foundation_and_overrides.css.scss', 'app/assets/stylesheets/foundation_and_overrides.css.scss'
+            copy_file 'foundation4-application.js', 'app/assets/javascripts/application.js'
+        end
+      end
+
       # Create an application layout file with partials for messages and navigation
       def generate_layout
         app = ::Rails.application

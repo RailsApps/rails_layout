@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h2. 0.2.0 October 31, 2013
+
+* installs a framework by setting up files in the assets folder
+
 h2. 0.1.9 October 20, 2013
 
 * use class instead of id for simple CSS flash messages
