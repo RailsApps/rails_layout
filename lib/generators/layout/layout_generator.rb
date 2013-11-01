@@ -13,15 +13,26 @@ module Layout
         remove_file 'app/assets/stylesheets/application.css'
         copy_file 'application.css.scss', 'app/assets/stylesheets/application.css.scss'
         case framework_name
+          when 'simple'
+            copy_file 'simple.css', 'app/assets/stylesheets/simple.css'
+            copy_file 'application.js', 'app/assets/javascripts/application.js'
+            remove_file 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
+            remove_file 'app/assets/stylesheets/foundation_and_overrides.css.scss'
           when 'bootstrap2'
             copy_file 'bootstrap2_and_overrides.css.scss', 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
             copy_file 'bootstrap-application.js', 'app/assets/javascripts/application.js'
+            remove_file 'app/assets/stylesheets/simple.css'
+            remove_file 'app/assets/stylesheets/foundation_and_overrides.css.scss'
           when 'bootstrap3'
             copy_file 'bootstrap3_and_overrides.css.scss', 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
             copy_file 'bootstrap-application.js', 'app/assets/javascripts/application.js'
+            remove_file 'app/assets/stylesheets/simple.css'
+            remove_file 'app/assets/stylesheets/foundation_and_overrides.css.scss'
           when 'foundation4'
             copy_file 'foundation_and_overrides.css.scss', 'app/assets/stylesheets/foundation_and_overrides.css.scss'
             copy_file 'foundation4-application.js', 'app/assets/javascripts/application.js'
+            remove_file 'app/assets/stylesheets/simple.css'
+            remove_file 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
         end
       end
 
@@ -34,15 +45,6 @@ module Layout
         template "#{framework_name}-application.html.#{ext}", "app/views/layouts/application.html.#{ext}"
         copy_file "#{framework_name}-messages.html.#{ext}", "app/views/layouts/_messages.html.#{ext}"
         copy_file "#{framework_name}-navigation.html.#{ext}", "app/views/layouts/_navigation.html.#{ext}"
-      end
-
-      # Add a simple stylesheet if there is no front-end framework
-      def simple_css
-        if framework_name == 'simple'
-          copy_file 'simple.css', 'app/assets/stylesheets/simple.css'
-        else
-          remove_file 'app/assets/stylesheets/simple.css'
-        end
       end
 
       # If 'About' or 'Contact' views exist in known locations, add navigation links
