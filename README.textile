@@ -175,11 +175,11 @@ See the files that are generated:
 
 The RailsLayout gem will create the file:
 
-* "app/assets/stylesheets/bootstrap_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/bootstrap2_and_overrides.css.scss
+* "app/assets/stylesheets/bootstrap_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2_and_overrides.css.scss
 
 and modify the file:
 
-* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/bootstrap-application.js
+* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap-application.js
 
 h2. Twitter Bootstrap 3.0 Layout
 
@@ -203,11 +203,11 @@ See the files that are generated:
 
 The RailsLayout gem will create the file:
 
-* "app/assets/stylesheets/bootstrap_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/bootstrap3_and_overrides.css.scss
+* "app/assets/stylesheets/bootstrap_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3_and_overrides.css.scss
 
 and modify the file:
 
-* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/bootstrap-application.js
+* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap-application.js
 
 h2. Zurb Foundation 4.0 Layout
 
@@ -231,11 +231,11 @@ See the files that are generated:
 
 The RailsLayout gem will create the file:
 
-* "app/assets/stylesheets/foundation_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/foundation_and_overrides.css.scss
+* "app/assets/stylesheets/foundation_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation_and_overrides.css.scss
 
 and modify the file:
 
-* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/foundation4-application.js
+* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-application.js
 
 h2. Reverting to None
 
