@@ -1,6 +1,35 @@
 h1. !http://railsapps.github.io/images/rails-36x36.jpg(RailsLayout Gem)! RailsLayout Gem
 
-RailsLayout is a utility gem to use during development to set up a default application layout with partials for Rails flash messages and navigation links. It is a Rails generator that you add to your Rails application Gemfile.
+RailsLayout is a utility gem to use during development.
+
+It is a Rails generator that you add to your Rails application Gemfile.
+
+Use it to set up a front-end framework:
+
+* Twitter Bootstrap 2.3
+* Twitter Bootstrap 3.0
+* Zurb Foundation 4.0
+
+It will rename *application.css.css* to *application.css.scss*.
+
+And modify the necessary asset files:
+
+* application.js
+
+and add either:
+
+* bootstrap_and_overrides.css.scss
+
+or:
+
+* foundation_and_overrides.css.scss
+
+It will set up a default application layout.
+
+You also get partials for
+
+* Rails flash messages
+* navigation links
 
 h4. Supported Frameworks
 
@@ -10,6 +39,7 @@ You can generate layout files suitable for use with the following front-end fram
 * @bootstrap2@ - Twitter Bootstrap 2.3
 * @bootstrap3@ - Twitter Bootstrap 3.0
 * @foundation4@ - Zurb Foundation 4.0
+* @none@ - removes all changes
 
 h4. Generated Files
 
@@ -25,7 +55,7 @@ Additionally, when the @simple@ option is selected:
 
 h4. Support for ERB or Haml
 
-If you are using ERB for Rails views, the RailsLayout gem will generate ERB files (as shown above).
+If you are using ERB for Rails views, the RailsLayout gem will generate ERB files.
 
 If you are using Haml, the RailsLayout gem will generate Haml files instead.
 
@@ -41,11 +71,38 @@ To see how the generated files from the RailsLayout gem are used, see the "Learn
 
 h2. Installing a Front-End Framework
 
-Follow the "instructions for Twitter Bootstrap":http://railsapps.github.io/twitter-bootstrap-rails.html or "Zurb Foundation":http://foundation.zurb.com/docs/rails.html to install a front-end framework.
+Instead of following the "instructions for Twitter Bootstrap":http://railsapps.github.io/twitter-bootstrap-rails.html or "Zurb Foundation":http://foundation.zurb.com/docs/rails.html to install a front-end framework, add the gems you need. Then use the RailsLayout gem. It will set up your assets files.
 
-Then install the RailsLayout gem and generate layout files.
+h3. Install Gems for a Front-End Framework
 
-h2. Installation
+Add the gems you need to your Rails application Gemfile:
+
+h4. Twitter Bootstrap 2.3
+
+<pre>
+gem 'bootstrap-sass', '~> 2.3.2.2'
+</pre>
+
+h4. Twitter Bootstrap 3.0
+
+<pre>
+gem 'bootstrap-sass'
+</pre>
+
+h4. Zurb Foundation 4.0
+
+<pre>
+gem 'compass-rails', '~> 2.0.alpha.0'
+gem 'zurb-foundation'
+</pre>
+
+Use Bundler to install the gems:
+
+<pre>
+$ bundle install
+</pre>
+
+h2. Install the RailsLayout Gem
 
 Add it to your Rails application Gemfile:
 
@@ -92,6 +149,10 @@ See the files that are generated:
 * "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/simple-navigation.html.erb
 * "app/assets/stylesheets/simple.css":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/simple.css
 
+The RailsLayout gem will create the file:
+
+* "app/assets/stylesheets/application.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/application.css.scss
+
 h2. Twitter Bootstrap 2.3 Layout
 
 To create layout files for use with Twitter Bootstrap 2.3:
@@ -111,6 +172,14 @@ See the files that are generated:
 * "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2-application.html.erb
 * "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2-messages.html.erb
 * "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2-navigation.html.erb
+
+The RailsLayout gem will create the file:
+
+* "app/assets/stylesheets/bootstrap_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/bootstrap2_and_overrides.css.scss
+
+and modify the file:
+
+* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/bootstrap-application.js
 
 h2. Twitter Bootstrap 3.0 Layout
 
@@ -132,6 +201,14 @@ See the files that are generated:
 * "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3-messages.html.erb
 * "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3-navigation.html.erb
 
+The RailsLayout gem will create the file:
+
+* "app/assets/stylesheets/bootstrap_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/bootstrap3_and_overrides.css.scss
+
+and modify the file:
+
+* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/bootstrap-application.js
+
 h2. Zurb Foundation 4.0 Layout
 
 To create layout files for use with Zurb Foundation 4.0:
@@ -151,6 +228,37 @@ See the files that are generated:
 * "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-application.html.erb
 * "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-messages.html.erb
 * "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-navigation.html.erb
+
+The RailsLayout gem will create the file:
+
+* "app/assets/stylesheets/foundation_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/foundation_and_overrides.css.scss
+
+and modify the file:
+
+* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/foundation4-application.js
+
+h2. Reverting to None
+
+To revert your application to a default application layout:
+
+<pre>
+$ rails generate layout none
+</pre>
+
+The RailsLayout gem will remove files it may have added:
+
+* app/views/layouts/_messages.html.erb
+* app/views/layouts/_navigation.html.erb
+* app/assets/stylesheets/simple.css
+* app/assets/stylesheets/bootstrap_and_overrides.css.scss
+* app/assets/stylesheets/foundation_and_overrides.css.scss
+
+Additionally, it will restore these files to the default versions:
+
+* app/views/layouts/application.html.erb
+* app/assets/javascripts/application.js
+
+The file *app/assets/stylesheets/application.css.scss* will contain a CSS rule but you can ignore it or remove it.
 
 h2. Help
 
