@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h2. 0.2.2 November 2, 2013
+
+* remove 'container' div from Bootstrap 3 application layout (issue #1)
+
 h2. 0.2.1 November 2, 2013
 
 * no turbolinks when used with Rails 3.2
