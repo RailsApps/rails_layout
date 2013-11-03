@@ -39,6 +39,9 @@ module Layout
             remove_file 'app/assets/stylesheets/simple.css'
             remove_file 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
         end
+        if Rails::VERSION::MAJOR.to_s == "3"
+          gsub_file 'app/assets/javascripts/application.js', /\/\/= require turbolinks\n/, ''
+        end
       end
 
       # Create an application layout file with partials for messages and navigation
@@ -47,6 +50,9 @@ module Layout
         @app_name = app.class.to_s.split("::").first
         ext = app.config.generators.options[:rails][:template_engine] || :erb
         template "#{framework_name}-application.html.#{ext}", "app/views/layouts/application.html.#{ext}"
+        if Rails::VERSION::MAJOR.to_s == "3"
+          gsub_file "app/views/layouts/application.html.#{ext}", /, "data-turbolinks-track" => true/, ''
+        end
         if framework_name == 'none'
           remove_file "app/views/layouts/_messages.html.#{ext}"
           remove_file "app/views/layouts/_navigation.html.#{ext}"

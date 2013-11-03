@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h2. 0.2.1 November 2, 2013
+
+* no turbolinks when used with Rails 3.2
+
 h2. 0.2.0 October 31, 2013
 
 * installs a framework by setting up files in the assets folder
