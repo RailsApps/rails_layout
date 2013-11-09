@@ -62,23 +62,15 @@ module Layout
         else
           copy_file "#{framework_name}-messages.html.#{ext}", "app/views/layouts/_messages.html.#{ext}"
           copy_file "#{framework_name}-navigation.html.#{ext}", "app/views/layouts/_navigation.html.#{ext}"
-          copy_file "navigation_links.html.#{ext}", "app/views/layouts/_navigation_links.html.#{ext}"
+          copy_file "navigation_links.html.erb", "app/views/layouts/_navigation_links.html.erb"
         end
       end
 
       # Add navigation links
       def add_navigation_links
-        app = ::Rails.application
-        ext = app.config.generators.options[:rails][:template_engine] || :erb
         unless framework_name == 'none'
-          case ext.to_s
-            when 'erb'
-              append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'About', page_path('about') %></li>\n" if File.exists?('app/views/pages/about.html.erb')
-              append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'Contact', new_contact_path %></li>\n" if File.exists?('app/views/contacts/new.html.erb')
-            when 'haml'
-              append_file 'app/views/layouts/_navigation_links.html.haml', "%li= link_to 'About', page_path('about')\n" if File.exists?('app/views/pages/about.html.haml')
-              append_file 'app/views/layouts/_navigation_links.html.haml', "%li= link_to 'Contact', new_contact_path\n" if File.exists?('app/views/contacts/new.html.haml')
-          end
+          append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'About', page_path('about') %></li>\n" if File.exists?('app/views/pages/about.html.erb')
+          append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'Contact', new_contact_path %></li>\n" if File.exists?('app/views/contacts/new.html.erb')
         end
       end
 
