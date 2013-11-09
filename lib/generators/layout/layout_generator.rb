@@ -68,9 +68,13 @@ module Layout
 
       # Add navigation links
       def add_navigation_links
+        app = ::Rails.application
+        ext = app.config.generators.options[:rails][:template_engine] || :erb
         unless framework_name == 'none'
-          append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'About', page_path('about') %></li>\n" if File.exists?('app/views/pages/about.html.erb')
-          append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'Contact', new_contact_path %></li>\n" if File.exists?('app/views/contacts/new.html.erb')
+          # ABOUT
+          append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'About', page_path('about') %></li>\n" if File.exists?("app/views/pages/about.html.#{ext}")
+          # CONTACT
+          append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'Contact', new_contact_path %></li>\n" if File.exists?("app/views/contacts/new.html.#{ext}")
         end
       end
 
