@@ -12,17 +12,13 @@ Use it to set up a front-end framework:
 
 It will rename *application.css* to *application.css.scss*.
 
-And modify the necessary asset files:
+And add:
+
+* framework_and_overrides.css.scss
+
+And modify the JavaScript asset file:
 
 * application.js
-
-and add either:
-
-* bootstrap_and_overrides.css.scss
-
-or:
-
-* foundation_and_overrides.css.scss
 
 It will set up a default application layout.
 
@@ -30,6 +26,8 @@ You also get partials for
 
 * Rails flash messages
 * navigation links
+
+Optionally, you can generate a navigation links file suitable for use with Devise (the authentication gem).
 
 h4. Supported Frameworks
 
@@ -48,10 +46,22 @@ The RailsLayout gem generates application layout files:
 * app/views/layouts/application.html.erb
 * app/views/layouts/_messages.html.erb
 * app/views/layouts/_navigation.html.erb
+* app/views/layouts/_navigation_links.html.erb
 
 Additionally, when the @simple@ option is selected:
 
 * app/assets/stylesheets/simple.css
+
+h4. Note About the Navigation Partials
+
+Two navigation partials are created:
+
+* app/views/layouts/_navigation.html.erb
+* app/views/layouts/_navigation_links.html.erb
+
+The first file exists to isolate framework-specific styling.
+
+The second file contains no framework-specific styling. It is only a list of links. You can add additional links to this file as needed.
 
 h4. Support for ERB or Haml
 
@@ -259,6 +269,46 @@ Additionally, it will restore these files to the default versions:
 * app/assets/javascripts/application.js
 
 The file *app/assets/stylesheets/application.css.scss* will contain a CSS rule but you can ignore it or remove it.
+
+h2. Navigation Links for Devise
+
+If you are using Devise for authentication, you can generate a navigation links partial containing links for Devise.
+
+<pre>
+$ rails generate navigation --force
+</pre>
+
+This creates a file *app/views/layouts/_navigation_links.html.erb*:
+
+<pre>
+<%# add navigation links to this file %>
+<li><%= link_to 'Home', root_path %></li>
+<li><%= link_to 'About', page_path('about') %></li>
+<li><%= link_to 'Contact', new_contact_path %></li>
+<% if user_signed_in? %>
+  <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
+<% else %>
+  <li><%= link_to 'Login', new_user_session_path %></li>
+<% end %>
+<% if user_signed_in? %>
+  <li><%= link_to 'Edit account', edit_user_registration_path %></li>
+<% else %>
+  <li><%= link_to 'Sign up', new_user_registration_path %></li>
+<% end %>
+<% if user_signed_in? %>
+  <% if current_user.has_role? :admin %>
+    <li><%= link_to 'Admin', users_path %></li>
+  <% end %>
+<% end %>
+</pre>
+
+The full set of links will be created if the following files are found in your application:
+
+* app/views/devise/sessions/new.html.erb
+* app/views/devise/registrations/new.html.erb
+* app/views/users/index.html.erb
+
+The @rails generate navigation@ command is used by the "Rails Composer":http://railsapps.github.io/rails-composer/ tool. It may not be suitable for your application if you haven't created custom view for Devise.
 
 h2. Help
 

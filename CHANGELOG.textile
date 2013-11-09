@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 0.4.1 November 9, 2013
+
+* add option to generate navigation links for Devise
+
 h3. 0.4.0 November 9, 2013
 
 * separate file for navigation links; isolate framework-specific markup in navigation partial
