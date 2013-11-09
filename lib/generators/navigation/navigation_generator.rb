@@ -27,13 +27,13 @@ module Navigation
         app = ::Rails.application
         ext = app.config.generators.options[:rails][:template_engine] || :erb
         unless framework_name == 'none'
-          case ext
+          case ext.to_s
             when 'erb'
-              append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'About', page_path('about') %></li>" if File.exists?('app/views/pages/about.html.erb')
-              append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'Contact', new_contact_path %></li>" if File.exists?('app/views/contacts/new.html.erb')
+              append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'About', page_path('about') %></li>\n" if File.exists?('app/views/pages/about.html.erb')
+              append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'Contact', new_contact_path %></li>\n" if File.exists?('app/views/contacts/new.html.erb')
             when 'haml'
-              append_file 'app/views/layouts/_navigation_links.html.haml', "%li= link_to 'About', page_path('about')" if File.exists?('app/views/pages/about.html.haml')
-              append_file 'app/views/layouts/_navigation_links.html.haml', "%li= link_to 'Contact', new_contact_path" if File.exists?('app/views/contacts/new.html.haml')
+              append_file 'app/views/layouts/_navigation_links.html.haml', "%li= link_to 'About', page_path('about')\n" if File.exists?('app/views/pages/about.html.haml')
+              append_file 'app/views/layouts/_navigation_links.html.haml', "%li= link_to 'Contact', new_contact_path\n" if File.exists?('app/views/contacts/new.html.haml')
           end
         end
       end
