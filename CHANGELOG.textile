@@ -1,55 +1,59 @@
 h1. CHANGELOG
 
-h2. 0.2.2 November 2, 2013
+h3. 0.3.0 November 9, 2013
+
+* create a file 'framework_and_overrides' instead of 'bootstrap_and_overrides' or 'foundation_and_overrides'
+
+h3. 0.2.2 November 2, 2013
 
 * remove 'container' div from Bootstrap 3 application layout (issue #1)
 
-h2. 0.2.1 November 2, 2013
+h3. 0.2.1 November 2, 2013
 
 * no turbolinks when used with Rails 3.2
 
-h2. 0.2.0 October 31, 2013
+h3. 0.2.0 October 31, 2013
 
 * installs a framework by setting up files in the assets folder
 
-h2. 0.1.9 October 20, 2013
+h3. 0.1.9 October 20, 2013
 
 * use class instead of id for simple CSS flash messages
 
-h2. 0.1.8 October 19, 2013
+h3. 0.1.8 October 19, 2013
 
 * fix navigation
 * fix Foundation messages partial
 
-h2. 0.1.7 October 13, 2013
+h3. 0.1.7 October 13, 2013
 
 * support for Haml markup
 
-h2. 0.1.6 October 13, 2013
+h3. 0.1.6 October 13, 2013
 
 * support for Zurb Foundation 4.0
 
-h2. 0.1.5 October 12, 2013
+h3. 0.1.5 October 12, 2013
 
 * support for Twitter Bootstrap 3.0
 
-h2. 0.1.4 September 20, 2013
+h3. 0.1.4 September 20, 2013
 
 * add simple stylesheet if there is no front-end framework
 
-h2. 0.1.3 September 20, 2013
+h3. 0.1.3 September 20, 2013
 
 * add missing escape sequence to ERB delimiters
 
-h2. 0.1.2 September 20, 2013
+h3. 0.1.2 September 20, 2013
 
 * add simple layout files
 * add missing turbolinks attributes
 
-h2. 0.1.1 September 19, 2013
+h3. 0.1.1 September 19, 2013
 
 * add navigation links for 'About' or 'Contact' if view files exist in expected locations
 
-h2. 0.1.0 September 19, 2013
+h3. 0.1.0 September 19, 2013
 
 * support for Twitter Bootstrap 2.3
