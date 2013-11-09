@@ -12,15 +12,7 @@
   %body
     -# application layout styled for Zurb Foundation 4
     %header
-      %nav.top-bar
-        %ul.title-area
-          %li.name
-            -# add site name or logo here
-          %li.toggle-topbar.menu-icon
-            %a{:href => "#"}
-              %span Menu
-        %section.top-bar-section
-          = render 'layouts/navigation'
+      = render 'layouts/navigation'
     %main{:role => "main"}
       .container
         .content

@@ -9,10 +9,8 @@
     = csrf_meta_tags
   %body
     -# application layout styled for Twitter Bootstrap 2.3
-    %header.navbar.navbar-fixed-top
-      %nav.navbar-inner
-        .container
-          = render 'layouts/navigation'
+    %header
+      = render 'layouts/navigation'
     %main{:role => "main"}
       .container
         .content

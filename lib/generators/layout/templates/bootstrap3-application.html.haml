@@ -10,16 +10,7 @@
   %body
     -# application layout styled for Twitter Bootstrap 3.0
     %header
-      %nav.navbar.navbar-default.navbar-fixed-top
-        .container
-          .navbar-header
-            %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-              %span.sr-only Toggle navigation
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
-          .collapse.navbar-collapse
-            = render 'layouts/navigation'
+      = render 'layouts/navigation'
     %main{:role => "main"}
       .container
         .container

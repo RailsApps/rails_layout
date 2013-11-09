@@ -10,7 +10,7 @@ Use it to set up a front-end framework:
 * Twitter Bootstrap 3.0
 * Zurb Foundation 4.0
 
-It will rename *application.css.css* to *application.css.scss*.
+It will rename *application.css* to *application.css.scss*.
 
 And modify the necessary asset files:
 

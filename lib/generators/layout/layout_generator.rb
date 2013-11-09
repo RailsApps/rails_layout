@@ -58,27 +58,25 @@ module Layout
         if framework_name == 'none'
           remove_file "app/views/layouts/_messages.html.#{ext}"
           remove_file "app/views/layouts/_navigation.html.#{ext}"
+          remove_file "app/views/layouts/_navigation_links.html.#{ext}"
         else
           copy_file "#{framework_name}-messages.html.#{ext}", "app/views/layouts/_messages.html.#{ext}"
           copy_file "#{framework_name}-navigation.html.#{ext}", "app/views/layouts/_navigation.html.#{ext}"
+          copy_file "navigation_links.html.#{ext}", "app/views/layouts/_navigation_links.html.#{ext}"
         end
       end
 
-      # If 'About' or 'Contact' views exist in known locations, add navigation links
+      # Add navigation links
       def add_navigation_links
+        ext = app.config.generators.options[:rails][:template_engine] || :erb
         unless framework_name == 'none'
-          # not yet accommodating Slim (we'll need different substitutions)
-          if File.exists?('app/views/pages/about.html.erb')
-            insert_into_file 'app/views/layouts/_navigation.html.erb', "\n  <li><%= link_to 'About', page_path('about') %></li>", :before => "\n</ul>"
-          end
-          if File.exists?('app/views/contacts/new.html.erb')
-            insert_into_file 'app/views/layouts/_navigation.html.erb', "\n  <li><%= link_to 'Contact', new_contact_path %></li>", :before => "\n</ul>"
-          end
-          if File.exists?('app/views/contacts/new.html.haml')
-            insert_into_file 'app/views/layouts/_navigation.html.haml', "\n  %li= link_to 'Contact', new_contact_path", :after => "root_path"
-          end
-          if File.exists?('app/views/pages/about.html.haml')
-            insert_into_file 'app/views/layouts/_navigation.html.haml', "\n  %li= link_to 'About', page_path('about')", :after => "root_path"
+          case ext
+            when 'erb'
+              append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'About', page_path('about') %></li>" if File.exists?('app/views/pages/about.html.erb')
+              append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'Contact', new_contact_path %></li>" if File.exists?('app/views/contacts/new.html.erb')
+            when 'haml'
+              append_file 'app/views/layouts/_navigation_links.html.haml', "%li= link_to 'About', page_path('about')" if File.exists?('app/views/pages/about.html.haml')
+              append_file 'app/views/layouts/_navigation_links.html.haml', "%li= link_to 'Contact', new_contact_path" if File.exists?('app/views/contacts/new.html.haml')
           end
         end
       end
