@@ -68,6 +68,7 @@ module Layout
 
       # Add navigation links
       def add_navigation_links
+        app = ::Rails.application
         ext = app.config.generators.options[:rails][:template_engine] || :erb
         unless framework_name == 'none'
           case ext
