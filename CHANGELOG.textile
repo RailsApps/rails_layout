@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 0.4.3 unreleased
+
+* initial use of mixins for uniform layout across frameworks
+
 h3. 0.4.2 November 9, 2013
 
 * move 'Home' link to conform to framework examples

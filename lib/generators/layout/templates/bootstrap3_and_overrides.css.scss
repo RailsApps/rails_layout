@@ -4,3 +4,14 @@
 // override for the 'Home' navigation link
 .navbar-brand {
   font-size: inherit; }
+
+// use mixins to create semantic classes
+.column {
+  @include make-md-column(6);
+}
+.form {
+  // not defined
+}
+.submit {
+  // not defined
+}

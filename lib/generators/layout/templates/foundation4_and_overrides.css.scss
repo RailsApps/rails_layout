@@ -9,3 +9,15 @@
   font-weight: bold;
   color: white;
   padding: 0 15px; }
+
+// use mixins to create semantic classes
+.column {
+  @include grid-column(6, center);
+}
+.form {
+  @include grid-column(8, center);
+}
+.submit {
+  @include button-base;
+  @include radius;
+}
