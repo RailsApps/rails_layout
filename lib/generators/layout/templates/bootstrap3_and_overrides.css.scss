@@ -1,2 +1,6 @@
+// import the CSS framework
 @import "bootstrap";
-body { padding-top: 60px; }
+
+// override for the 'Home' navigation link
+.navbar-brand {
+  font-size: inherit; }

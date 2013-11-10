@@ -241,7 +241,7 @@ See the files that are generated:
 
 The RailsLayout gem will create the file:
 
-* "app/assets/stylesheets/foundation_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation_and_overrides.css.scss
+* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4_and_overrides.css.scss
 
 and modify the file:
 
@@ -262,6 +262,7 @@ The RailsLayout gem will remove files it may have added:
 * app/assets/stylesheets/simple.css
 * app/assets/stylesheets/bootstrap_and_overrides.css.scss
 * app/assets/stylesheets/foundation_and_overrides.css.scss
+* app/assets/stylesheets/framework_and_overrides.css.scss
 
 Additionally, it will restore these files to the default versions:
 

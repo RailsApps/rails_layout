@@ -1,0 +1,11 @@
+// import the CSS framework
+@import "foundation";
+
+// override for the 'Home' navigation link
+.top-bar .name {
+  font-size: 0.8125em;
+  line-height: 45px; }
+.top-bar .name a {
+  font-weight: bold;
+  color: white;
+  padding: 0 15px; }

@@ -1,10 +1,22 @@
 <%# navigation styled for Twitter Bootstrap 2.3 %>
-<div class="navbar navbar-fixed-top">
-  <nav class="navbar-inner">
+<div class="navbar">
+  <div class="navbar-inner">
     <div class="container">
-      <ul class="nav">
-        <%= render 'layouts/navigation_links' %>
-      </ul>
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <div class="nav-collapse collapse">
+        <div class="navbar navbar-fixed-top">
+          <nav class="navbar-inner">
+            <ul class="nav">
+              <li><%= link_to 'Home', root_path %><li>
+              <%= render 'layouts/navigation_links' %>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
-  </nav>
+  </div>
 </div>

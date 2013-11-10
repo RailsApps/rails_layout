@@ -1,5 +1,10 @@
 h1. CHANGELOG
 
+h3. 0.4.2 November 9, 2013
+
+* move 'Home' link to conform to framework examples
+* add responsive navbar for Twitter Bootstrap 2.3
+
 h3. 0.4.1 November 9, 2013
 
 * add option to generate navigation links for Devise

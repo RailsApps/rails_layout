@@ -1,6 +1,14 @@
 -# navigation styled for Twitter Bootstrap 2.3
-.navbar.navbar-fixed-top
-  %nav.navbar-inner
+.navbar
+  .navbar-inner
     .container
-      %ul.nav
-      = render 'layouts/navigation_links'
+      %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      .nav-collapse.collapse
+        .navbar.navbar-fixed-top
+          %nav.navbar-inner
+            %ul.nav
+              = link_to 'Home', root_path, class: 'brand'
+              = render 'layouts/navigation_links'
