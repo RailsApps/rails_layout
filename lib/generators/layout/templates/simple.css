@@ -1,6 +1,11 @@
 /*
  * Simple CSS stylesheet for a navigation bar and flash messages.
  */
+main {
+  background-color: #eee;
+  padding-bottom: 80px;
+  width: 100%;
+  }
 header {
   border: 1px solid #d4d4d4;
   background-image: linear-gradient(to bottom, white, #f2f2f2);

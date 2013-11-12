@@ -9,19 +9,12 @@
     <%%= csrf_meta_tags %>
   </head>
   <body>
-    <%%# application layout styled for Twitter Bootstrap 3.0 %>
     <header>
       <%%= render 'layouts/navigation' %>
     </header>
     <main role="main">
-      <div class="container">
-         <div class="row">
-           <div class="col-md-12">
-             <%%= render 'layouts/messages' %>
-             <%%= yield %>
-           </div>
-         </div>
-      </div>
+       <%%= render 'layouts/messages' %>
+       <%%= yield %>
     </main>
   </body>
 </html>

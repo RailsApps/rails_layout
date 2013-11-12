@@ -8,11 +8,8 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    .container
-      %header
-        = render 'layouts/navigation'
-      %main{:role => "main"}
-        .content
-          = render 'layouts/messages'
-          = yield
-      %footer
+    %header
+      = render 'layouts/navigation'
+    %main{:role => "main"}
+      = render 'layouts/messages'
+      = yield

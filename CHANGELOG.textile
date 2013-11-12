@@ -1,8 +1,8 @@
 h1. CHANGELOG
 
-h3. 0.4.3 unreleased
+h3. 0.5.0 November 11, 2013
 
-* initial use of mixins for uniform layout across frameworks
+* use mixins for uniform layout across frameworks
 
 h3. 0.4.2 November 9, 2013
 

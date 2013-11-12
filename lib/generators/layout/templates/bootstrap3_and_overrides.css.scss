@@ -3,15 +3,39 @@
 
 // override for the 'Home' navigation link
 .navbar-brand {
-  font-size: inherit; }
+  font-size: inherit;
+  }
+// make all images responsive by default
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+  }
 
 // use mixins to create semantic classes
+main {
+  @extend .container;
+  background-color: #eee;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-top: 51px; // accommodate the navbar
+  }
+section {
+  @extend .row;
+  margin-top: 20px;
+  }
 .column {
-  @include make-md-column(6);
-}
+  @extend .col-md-6;
+  @extend .text-center;
+  }
 .form {
-  // not defined
-}
+  @extend .col-md-6;
+  }
+.form-centered {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
 .submit {
-  // not defined
-}
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+  }
