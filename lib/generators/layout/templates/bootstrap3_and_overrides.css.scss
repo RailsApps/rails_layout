@@ -1,29 +1,19 @@
 // import the CSS framework
 @import "bootstrap";
 
-// override for the 'Home' navigation link
-.navbar-brand {
-  font-size: inherit;
-  }
 // make all images responsive by default
 img {
   @extend .img-responsive;
   margin: 0 auto;
   }
+// override for the 'Home' navigation link
+.navbar-brand {
+  font-size: inherit;
+  }
 
-// use mixins to create semantic classes
-// these are examples you can modify
-main {
-  @extend .container;
-  background-color: #eee;
-  padding-bottom: 80px;
-  width: 100%;
-  margin-top: 51px; // accommodate the navbar
-  }
-section {
-  @extend .row;
-  margin-top: 20px;
-  }
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create your own classes
+// to make views framework-neutral
 .column {
   @extend .col-md-6;
   @extend .text-center;
@@ -39,4 +29,17 @@ section {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-lg;
+  }
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @extend .container;
+  background-color: #eee;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-top: 51px; // accommodate the navbar
+  }
+section {
+  @extend .row;
+  margin-top: 20px;
   }

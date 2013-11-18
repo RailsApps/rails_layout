@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 0.5.3 November 18, 2013
+
+* better comments
+
 h3. 0.5.2 November 18, 2013
 
 * fix mixin names

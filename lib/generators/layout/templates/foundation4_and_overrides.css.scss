@@ -10,8 +10,8 @@
   color: white;
   padding: 0 15px; }
 
-// use mixins to create semantic classes
-// these are examples you can modify
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create mixins using Foundation classes
 @mixin twelve-columns {
   @extend .small-12;
   @extend .columns;
@@ -21,14 +21,8 @@
   @extend .columns;
   @extend .text-center;
   }
-main {
-  @include twelve-columns;
-  background-color: #eee;
-  }
-section {
-  @extend .row;
-  margin-top: 20px;
-  }
+// create your own classes
+// to make views framework-neutral
 .column {
   @include six-columns-centered;
   }
@@ -41,4 +35,14 @@ section {
 .submit {
   @extend .button;
   @extend .radius;
+  }
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @include twelve-columns;
+  background-color: #eee;
+  }
+section {
+  @extend .row;
+  margin-top: 20px;
   }
