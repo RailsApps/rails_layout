@@ -12,17 +12,17 @@
 
 // use mixins to create semantic classes
 // these are examples you can modify
-@mixin 12-columns {
+@mixin twelve-columns {
   @extend .small-12;
   @extend .columns;
   }
-@mixin 6-columns-centered {
+@mixin six-columns-centered {
   @extend .small-6;
   @extend .columns;
   @extend .text-center;
   }
 main {
-  @include 12-columns;
+  @include twelve-columns;
   background-color: #eee;
   }
 section {
@@ -30,13 +30,13 @@ section {
   margin-top: 20px;
   }
 .column {
-  @include 6-columns-centered;
+  @include six-columns-centered;
   }
 .form {
   @include grid-column(6);
   }
 .form-centered {
-  @include 6-columns-centered;
+  @include six-columns-centered;
   }
 .submit {
   @extend .button;

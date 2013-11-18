@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 0.5.2 November 18, 2013
+
+* fix mixin names
+
 h3. 0.5.1 November 18, 2013
 
 * make it clear that the mixins are just examples
