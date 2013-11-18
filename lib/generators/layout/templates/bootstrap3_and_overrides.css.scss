@@ -12,6 +12,7 @@ img {
   }
 
 // use mixins to create semantic classes
+// these are examples you can modify
 main {
   @extend .container;
   background-color: #eee;

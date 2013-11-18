@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 0.5.1 November 18, 2013
+
+* make it clear that the mixins are just examples
+
 h3. 0.5.0 November 11, 2013
 
 * use mixins for uniform layout across frameworks
