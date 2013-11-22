@@ -7,19 +7,19 @@ Use it to set up your choice of front-end framework:
 * Twitter Bootstrap 2.3
 * Twitter Bootstrap 3.0
 * Zurb Foundation 4.0
-* Zurb Foundation 4.0
+* Zurb Foundation 5.0
 
 Add it to your Rails application Gemfile, then use the generator.
 
 It will rename *application.css* to *application.css.scss*.
 
-And add:
+It will add:
 
-* framework_and_overrides.css.scss
+* *framework_and_overrides.css.scss*
 
 And modify the JavaScript asset file:
 
-* application.js
+* *application.js*
 
 It will set up a default application layout.
 
@@ -84,8 +84,6 @@ Look at the "Learn Rails":https://github.com/RailsApps/learn-rails example appli
 h2. Installing a Front-End Framework
 
 Instead of following the "instructions for Twitter Bootstrap":http://railsapps.github.io/twitter-bootstrap-rails.html or "Zurb Foundation":http://foundation.zurb.com/docs/rails.html to install a front-end framework, add the gems you need. Then use the RailsLayout gem. It will set up your assets files.
-
-h3. Install Gems for a Front-End Framework
 
 Add the gems you need to your Rails application Gemfile:
 
