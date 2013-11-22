@@ -2,13 +2,14 @@ h1. !http://railsapps.github.io/images/rails-36x36.jpg(RailsLayout Gem)! RailsLa
 
 RailsLayout is a utility gem to use during development.
 
-It is a Rails generator that you add to your Rails application Gemfile.
-
-Use it to set up a front-end framework:
+Use it to set up your choice of front-end framework:
 
 * Twitter Bootstrap 2.3
 * Twitter Bootstrap 3.0
 * Zurb Foundation 4.0
+* Zurb Foundation 4.0
+
+Add it to your Rails application Gemfile, then use the generator.
 
 It will rename *application.css* to *application.css.scss*.
 
@@ -22,12 +23,12 @@ And modify the JavaScript asset file:
 
 It will set up a default application layout.
 
-You also get partials for
+It creates partials for:
 
 * Rails flash messages
 * navigation links
 
-Optionally, you can generate a navigation links file suitable for use with Devise (the authentication gem).
+You can also generate a navigation links file suitable for use with Devise (the authentication gem).
 
 h4. Supported Frameworks
 
@@ -37,6 +38,7 @@ You can generate layout files suitable for use with the following front-end fram
 * @bootstrap2@ - Twitter Bootstrap 2.3
 * @bootstrap3@ - Twitter Bootstrap 3.0
 * @foundation4@ - Zurb Foundation 4.0
+* @foundation5@ - Zurb Foundation 5.0
 * @none@ - removes all changes
 
 h4. Generated Files
@@ -56,12 +58,12 @@ h4. Note About the Navigation Partials
 
 Two navigation partials are created:
 
-* app/views/layouts/_navigation.html.erb
 * app/views/layouts/_navigation_links.html.erb
+* app/views/layouts/_navigation.html.erb
 
-The first file exists to isolate framework-specific styling.
+The first file contains no framework-specific styling. It is only a list of links. You can add additional links to this file as needed.
 
-The second file contains no framework-specific styling. It is only a list of links. You can add additional links to this file as needed.
+The second file contains framework-specific styling.
 
 h4. Support for ERB or Haml
 
@@ -73,9 +75,9 @@ h4. Rails Composer
 
 The "Rails Composer":http://railsapps.github.io/rails-composer/ tool, an application template used to create starter applications, uses the RailsLayout gem to generate the layout files used in various starter applications. You can use Rails Composer to generate entire applications.
 
-h2. Usage Example
+h4. Usage Example
 
-To see how the generated files from the RailsLayout gem are used, see the "Learn Rails":https://github.com/RailsApps/learn-rails example application that is described in the book "Learn Ruby on Rails":http://learn-rails.com/learn-ruby-on-rails.html.
+Look at the "Learn Rails":https://github.com/RailsApps/learn-rails example application to see how the generated files from the RailsLayout gem are used. You'll find details about the example application in the book "Learn Ruby on Rails":http://learn-rails.com/learn-ruby-on-rails.html.
 
 !http://railsapps.github.io/images/learn-rails-cover-130x161.jpg(Learn Ruby on Rails)!:http://learn-rails.com/learn-ruby-on-rails.html
 
@@ -106,7 +108,15 @@ gem 'compass-rails', '~> 2.0.alpha.0'
 gem 'zurb-foundation'
 </pre>
 
-Use Bundler to install the gems:
+h4. Zurb Foundation 5.0
+
+<pre>
+gem 'foundation-rails'
+</pre>
+
+h4. Use Bundler
+
+Use Bundler to install the gem:
 
 <pre>
 $ bundle install
@@ -138,7 +148,11 @@ Use Bundler to install the gem:
 $ bundle install
 </pre>
 
-h2. Generate a Simple Layout
+h2. Generate an Application Layout
+
+Generate application layout files for the framework you will use.
+
+h3. Generate a Simple Layout
 
 To create a set of simple layout files:
 
@@ -163,7 +177,7 @@ The RailsLayout gem will create the file:
 
 * "app/assets/stylesheets/application.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/application.css.scss
 
-h2. Twitter Bootstrap 2.3 Layout
+h3. Twitter Bootstrap 2.3 Layout
 
 To create layout files for use with Twitter Bootstrap 2.3:
 
@@ -191,7 +205,7 @@ and modify the file:
 
 * "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap-application.js
 
-h2. Twitter Bootstrap 3.0 Layout
+h3. Twitter Bootstrap 3.0 Layout
 
 To create layout files for use with Twitter Bootstrap 3.0:
 
@@ -219,7 +233,7 @@ and modify the file:
 
 * "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap-application.js
 
-h2. Zurb Foundation 4.0 Layout
+h3. Zurb Foundation 4.0 Layout
 
 To create layout files for use with Zurb Foundation 4.0:
 
@@ -247,7 +261,35 @@ and modify the file:
 
 * "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-application.js
 
-h2. Reverting to None
+h3. Zurb Foundation 5.0 Layout
+
+To create layout files for use with Zurb Foundation 5.0:
+
+<pre>
+$ rails generate layout foundation5
+</pre>
+
+Use @--force@ if you want to overwrite existing files:
+
+<pre>
+$ rails generate layout foundation5 --force
+</pre>
+
+See the files that are generated:
+
+* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation5-application.html.erb
+* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-messages.html.erb
+* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation5-navigation.html.erb
+
+The RailsLayout gem will create the file:
+
+* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation5_and_overrides.css.scss
+
+and modify the file:
+
+* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation5-application.js
+
+h3. Reverting to None
 
 To revert your application to a default application layout:
 
@@ -255,7 +297,7 @@ To revert your application to a default application layout:
 $ rails generate layout none
 </pre>
 
-The RailsLayout gem will remove files it may have added:
+The RailsLayout gem will remove any files it may have added:
 
 * app/views/layouts/_messages.html.erb
 * app/views/layouts/_navigation.html.erb
@@ -309,7 +351,9 @@ The full set of links will be created if the following files are found in your a
 * app/views/devise/registrations/new.html.erb
 * app/views/users/index.html.erb
 
-The @rails generate navigation@ command is used by the "Rails Composer":http://railsapps.github.io/rails-composer/ tool. It may not be suitable for your application if you haven't created custom view for Devise.
+These files will be present in your application if you have created custom views for Devise.
+
+The @rails generate navigation@ command is used to populate the navigation bar in starter applications created by the "Rails Composer":http://railsapps.github.io/rails-composer/ tool.
 
 h2. Help
 

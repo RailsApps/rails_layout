@@ -40,6 +40,11 @@ module Layout
             copy_file 'foundation4-application.js', 'app/assets/javascripts/application.js'
             remove_file 'app/assets/stylesheets/simple.css'
             remove_file 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
+          when 'foundation5'
+            copy_file 'foundation5_and_overrides.css.scss', 'app/assets/stylesheets/framework_and_overrides.css.scss'
+            copy_file 'foundation5-application.js', 'app/assets/javascripts/application.js'
+            remove_file 'app/assets/stylesheets/simple.css'
+            remove_file 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
         end
         if Rails::VERSION::MAJOR.to_s == "3"
           gsub_file 'app/assets/javascripts/application.js', /\/\/= require turbolinks\n/, ''

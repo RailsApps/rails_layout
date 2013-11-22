@@ -1,0 +1,48 @@
+// import the CSS framework
+@import "foundation";
+
+// override for the 'Home' navigation link
+.top-bar .name {
+  font-size: 0.8125em;
+  line-height: 45px; }
+.top-bar .name a {
+  font-weight: bold;
+  color: white;
+  padding: 0 15px; }
+
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create mixins using Foundation classes
+@mixin twelve-columns {
+  @extend .small-12;
+  @extend .columns;
+  }
+@mixin six-columns-centered {
+  @extend .small-6;
+  @extend .columns;
+  @extend .text-center;
+  }
+// create your own classes
+// to make views framework-neutral
+.column {
+  @include six-columns-centered;
+  }
+.form {
+  @include grid-column(6);
+  }
+.form-centered {
+  @include six-columns-centered;
+  }
+.submit {
+  @extend .button;
+  @extend .radius;
+  }
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @include twelve-columns;
+  background-color: #eee;
+  }
+section {
+  @extend .row;
+  margin-top: 20px;
+  }

@@ -13,6 +13,9 @@ Description:
     Create layout files suitable for Zurb Foundation 4.0:
       rails generate layout foundation4
 
+    Create layout files suitable for Zurb Foundation 5.0:
+      rails generate layout foundation5
+
     Remove layout files:
       rails generate layout none
 
