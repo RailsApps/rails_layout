@@ -4,10 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%%= content_for?(:title) ? yield(:title) : "<%= app_name.underscore.titleize %>" %></title>
     <meta name="description" content="<%%= content_for?(:description) ? yield(:description) : "<%= app_name.underscore.titleize %>" %>">
-    <%%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    <%%= stylesheet_link_tag "application" %>
+    <%%# Foundation 5 won't work with Rails Turbolinks %>
     <%%# Modernizr is required for Zurb Foundation %>
-    <%%= javascript_include_tag "vendor/custom.modernizr" %>
-    <%%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%%= javascript_include_tag "vendor/modernizr" %>
     <%%= csrf_meta_tags %>
   </head>
   <body>
@@ -18,5 +18,7 @@
        <%%= render 'layouts/messages' %>
        <%%= yield %>
     </main>
+    <%%# Foundation 5 won't work when application.js is included in HEAD %>
+    <%%= javascript_include_tag "application" %>
   </body>
 </html>
