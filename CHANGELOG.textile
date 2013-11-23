@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 0.5.6 November 23, 2013
+
+* minor tweak for Zurb Foundation
+
 h3. 0.5.5 November 22, 2013
 
 * fixes for Zurb Foundation 5.0

@@ -3,10 +3,10 @@
 
 // override for the 'Home' navigation link
 .top-bar .name {
-  font-size: 0.8125em;
+  font-size: rem-calc(13);
   line-height: 45px; }
 .top-bar .name a {
-  font-weight: bold;
+  font-weight: normal;
   color: white;
   padding: 0 15px; }
 
