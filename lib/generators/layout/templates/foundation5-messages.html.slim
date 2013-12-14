@@ -1,0 +1,7 @@
+/ Rails flash messages styled for Zurb Foundation
+- flash.each do |name, msg|
+  - if msg.is_a?(String)
+    div[class="alert-box round #{name == :notice ? "success" : "alert"}" data-alert] 
+      = content_tag :div, msg
+    a.close[href="#"]
+      | ×

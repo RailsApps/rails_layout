@@ -1,0 +1,11 @@
+/ navigation styled for Zurb Foundation 4
+nav.top-bar
+  ul.title-area
+    li.name
+      = link_to 'Home', root_path
+    li.toggle-topbar.menu-icon
+      a[href="#"]
+        span Menu
+  .top-bar-section
+    ul
+      == render 'layouts/navigation_links'
