@@ -110,7 +110,7 @@ gem 'bootstrap-sass'
 h4. Zurb Foundation 4.0
 
 <pre>
-gem 'compass-rails', '~> 2.0.alpha.0'
+gem 'compass-rails'
 gem 'zurb-foundation'
 </pre>
 
