@@ -65,11 +65,11 @@ The first file contains no framework-specific styling. It is only a list of link
 
 The second file contains framework-specific styling.
 
-h4. Support for ERB or Haml
+h4. Support for ERB, Haml, or Slim
 
 If you are using ERB for Rails views, the RailsLayout gem will generate ERB files.
 
-If you are using Haml, the RailsLayout gem will generate Haml files instead.
+If you are using Haml or Slim, the RailsLayout gem will generate Haml or Slim files instead.
 
 h4. Rails Composer
 
