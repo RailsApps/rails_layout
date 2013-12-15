@@ -56,6 +56,7 @@ module Layout
         app = ::Rails.application
         @app_name = app.class.to_s.split("::").first
         ext = app.config.generators.options[:rails][:template_engine] || :erb
+        remove_file 'app/views/layouts/application.html.erb'
         template "#{framework_name}-application.html.#{ext}", "app/views/layouts/application.html.#{ext}"
         if Rails::VERSION::MAJOR.to_s == "3"
           gsub_file "app/views/layouts/application.html.#{ext}", /, "data-turbolinks-track" => true/, ''
