@@ -3,6 +3,7 @@ h1. CHANGELOG
 h3. 0.5.8 unreleased
 
 * remove 'app/views/layouts/application.html.erb' file before creating a new one
+* fix error in slim templates for 'app_name.underscore.titleize'
 
 h3. 0.5.7 December 15, 2013
 
