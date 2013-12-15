@@ -1,4 +1,4 @@
-<%# Rails flash messages styled for Twitter Bootstrap 3.0 %>
+<%# Rails flash messages styled for Bootstrap 3.0 %>
 <% flash.each do |name, msg| %>
   <% if msg.is_a?(String) %>
     <div class="alert alert-<%= name == :notice ? "success" : "danger" %>">

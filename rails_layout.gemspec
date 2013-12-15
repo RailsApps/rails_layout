@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Daniel Kehoe"]
   spec.email         = ["daniel@danielkehoe.com"]
   spec.description   = %q{Generates Rails application layout files for use with various front-end frameworks.}
-  spec.summary       = %q{Rails generator creates application layout files for Twitter Bootstrap and other frameworks.}
+  spec.summary       = %q{Rails generator creates application layout files for Bootstrap and other frameworks.}
   spec.homepage      = "http://github.com/RailsApps/rails_layout/"
   spec.license       = "MIT"
 

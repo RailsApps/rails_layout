@@ -4,10 +4,10 @@ Description:
     Create simple layout files when no front-end framework is used:
       rails generate layout simple
 
-    Create layout files suitable for Twitter Bootstrap 2.3:
+    Create layout files suitable for Bootstrap 2.3:
       rails generate layout bootstrap2
 
-    Create layout files suitable for Twitter Bootstrap 3.0:
+    Create layout files suitable for Bootstrap 3.0:
       rails generate layout bootstrap3
 
     Create layout files suitable for Zurb Foundation 4.0:
