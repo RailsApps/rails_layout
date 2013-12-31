@@ -15,7 +15,7 @@ module Navigation
         # CONTACT
         append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'Contact', new_contact_path %></li>\n" if File.exists?("app/views/contacts/new.html.#{ext}")
         # DEVISE LOGIN and LOGOUT
-        if File.exists?("app/views/devise/sessions/new.html.#{ext}")
+        if Dir.glob("app/views/devise/sessions/new.html.{#{ext},erb}").any?
           append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
 <% if user_signed_in? %>
   <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
@@ -26,7 +26,7 @@ LINKS
           end
         end
         # DEVISE SIGN UP
-        if File.exists?("app/views/devise/registrations/new.html.#{ext}")
+        if Dir.glob("app/views/devise/registrations/new.html.{#{ext},erb}").any?
           append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
 <% if user_signed_in? %>
   <li><%= link_to 'Edit account', edit_user_registration_path %></li>
@@ -37,7 +37,7 @@ LINKS
           end
         end
         # ADMIN LINK
-        if File.exists?("app/views/users/index.html.#{ext}")
+        if Dir.glob("app/views/users/index.html.{#{ext},erb}").any?
           append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
 <% if user_signed_in? %>
   <% if current_user.has_role? :admin %>
