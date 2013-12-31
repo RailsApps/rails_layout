@@ -68,7 +68,7 @@ module Layout
         else
           copy_file "#{framework_name}-messages.html.#{ext}", "app/views/layouts/_messages.html.#{ext}"
           copy_file "#{framework_name}-navigation.html.#{ext}", "app/views/layouts/_navigation.html.#{ext}"
-          copy_file "navigation_links.html.erb", "app/views/layouts/_navigation_links.html.erb"
+          copy_file "navigation_links.html.#{ext}", "app/views/layouts/_navigation_links.html.#{ext}"
         end
       end
 
