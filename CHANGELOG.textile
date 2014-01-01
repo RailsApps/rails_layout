@@ -1,5 +1,10 @@
 h1. CHANGELOG
 
+h3. 0.5.10 January 1, 2014
+
+* add Devise navigation links for Haml or Slim (contributed by Brad Carson)
+* fix formatting of flash message alert box for Slim (contributed by Brad Carson)
+
 h3. 0.5.9 December 26, 2013
 
 * fix error in slim templates for doctype (contributed by ayamomiji)
