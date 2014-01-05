@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 0.5.11 January 5, 2014
+
+* fix Devise navigation links (when there is no 'has_role?' for authorization)
+
 h3. 0.5.10 January 1, 2014
 
 * add Devise navigation links for Haml or Slim (contributed by Brad Carson)

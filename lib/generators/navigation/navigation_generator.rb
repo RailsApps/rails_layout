@@ -36,13 +36,11 @@ LINKS
 LINKS
           end
         end
-        # ADMIN LINK
+        # USERS LINK
         if Dir.glob("app/views/users/index.html.{#{ext},erb}").any?
           append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
 <% if user_signed_in? %>
-  <% if current_user.has_role? :admin %>
-    <li><%= link_to 'Admin', users_path %></li>
-  <% end %>
+  <li><%= link_to 'Users', users_path %></li>
 <% end %>
 LINKS
           end
