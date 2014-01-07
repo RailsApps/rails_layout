@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 0.6.0 unreleased
+
+* generate Devise views (work in progress)
+
 h3. 0.5.11 January 5, 2014
 
 * fix Devise navigation links (when there is no 'has_role?' for authorization)
