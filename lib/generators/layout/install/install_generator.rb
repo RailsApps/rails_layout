@@ -2,9 +2,11 @@ require 'rails/generators'
 
 module Layout
   module Generators
-    class LayoutGenerator < ::Rails::Generators::Base
+    class InstallGenerator < ::Rails::Generators::Base
       source_root File.expand_path("../templates", __FILE__)
       argument :framework_name, :type => :string, :default => "simple"
+
+      desc "Creates Rails layout files suitable for various front-end frameworks."
 
       attr_reader :app_name
 

@@ -1,10 +1,12 @@
 require 'rails/generators'
 
-module Views
+module Layout
   module Generators
-    class ViewsGenerator < ::Rails::Generators::Base
+    class DeviseGenerator < ::Rails::Generators::Base
       source_root File.expand_path("../templates", __FILE__)
       argument :framework_name, :type => :string, :default => "simple"
+
+      desc "Copies Devise views to your application, with styling for a front-end framework."
 
       # Add stylesheet for Devise views
       def add_devise_stylesheet

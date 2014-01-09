@@ -1,9 +1,11 @@
 require 'rails/generators'
 
-module Navigation
+module Layout
   module Generators
     class NavigationGenerator < ::Rails::Generators::Base
       source_root File.expand_path("../templates", __FILE__)
+
+      desc "Adds links to a navigation bar."
 
       # Add navigation links
       def add_navigation_links
