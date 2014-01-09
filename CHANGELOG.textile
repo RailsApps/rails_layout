@@ -2,8 +2,9 @@ h1. CHANGELOG
 
 h3. 1.0.0 unreleased
 
-* generate Devise views (work in progress)
-* change generator commands (see README)
+* generate Devise views (login view)
+* change generator commands (described in README)
+* Haml Foundation 5 topbar syntax correction (fixes #11) (contributed by i5okie)
 
 h3. 0.5.11 January 5, 2014
 
