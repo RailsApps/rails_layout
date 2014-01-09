@@ -1,118 +1,50 @@
 h1. !http://railsapps.github.io/images/rails-36x36.jpg(RailsLayout Gem)! RailsLayout Gem
 
-RailsLayout is a utility gem to use during development.
+Use this gem to set up layout files for your choice of front-end framework:
 
-Use it to set up your choice of front-end framework:
-
-* Bootstrap 2.3
-* Bootstrap 3.0
-* Zurb Foundation 4.0
 * Zurb Foundation 5.0
+* Zurb Foundation 4.0
+* Bootstrap 3.0
+* Bootstrap 2.3
 
-Add it to your Rails application Gemfile, then use the generator.
+Plus it will set up "Devise":https://github.com/plataformatec/devise views with styling for Bootstrap or Foundation.
 
-It will rename *application.css* to *application.css.scss*.
-
-It will add:
-
-* *framework_and_overrides.css.scss*
-
-And modify the JavaScript asset file:
-
-* *application.js*
-
-It will set up a default application layout.
-
-It creates partials for:
-
-* Rails flash messages
-* navigation links
-
-You can also generate a navigation links file suitable for use with Devise (the authentication gem).
-
-h4. Supported Frameworks
-
-You can generate layout files suitable for use with the following front-end frameworks:
-
-* @simple@ - simple layout
-* @bootstrap2@ - Bootstrap 2.3
-* @bootstrap3@ - Bootstrap 3.0
-* @foundation4@ - Zurb Foundation 4.0
-* @foundation5@ - Zurb Foundation 5.0
-* @none@ - removes all changes
-
-h4. Generated Files
-
-The RailsLayout gem generates application layout files:
-
-* app/views/layouts/application.html.erb
-* app/views/layouts/_messages.html.erb
-* app/views/layouts/_navigation.html.erb
-* app/views/layouts/_navigation_links.html.erb
-
-Additionally, when the @simple@ option is selected:
-
-* app/assets/stylesheets/simple.css
-
-h4. Note About the Navigation Partials
-
-Two navigation partials are created:
-
-* app/views/layouts/_navigation_links.html.erb
-* app/views/layouts/_navigation.html.erb
-
-The first file contains no framework-specific styling. It is only a list of links. You can add additional links to this file as needed.
-
-The second file contains framework-specific styling.
-
-h4. Support for ERB, Haml, or Slim
-
-If you are using ERB for Rails views, the RailsLayout gem will generate ERB files.
-
-If you are using Haml or Slim, the RailsLayout gem will generate Haml or Slim files instead.
+RailsLayout is a utility gem to use during development.
 
 h4. Rails Composer
 
-The "Rails Composer":http://railsapps.github.io/rails-composer/ tool, an application template used to create starter applications, uses the RailsLayout gem to generate the layout files used in various starter applications. You can use Rails Composer to generate entire applications.
+The RailsLayout gem is used by "Rails Composer":http://railsapps.github.io/rails-composer/ tool, an application template used to create starter applications. You can use Rails Composer to generate entire applications.
 
-h4. Usage Example
+h2. Command Summary
 
-Look at the "Learn Rails":https://github.com/RailsApps/learn-rails example application to see how the generated files from the RailsLayout gem are used. You'll find details about the example application in the book "Learn Ruby on Rails":http://learn-rails.com/learn-ruby-on-rails.html.
+h4. Generate Application Layout, Navigation, and Flash Message Files
 
-!http://railsapps.github.io/images/learn-rails-cover-130x161.jpg(Learn Ruby on Rails)!:http://learn-rails.com/learn-ruby-on-rails.html
+* @$ rails generate layout:install foundation5@
+* @$ rails generate layout:install foundation4@
+* @$ rails generate layout:install bootstrap3@
+* @$ rails generate layout:install bootstrap2@
+* @$ rails generate layout:install simple@
+* @$ rails generate layout:install none@
 
-h4. Documentation
+h4. Add Links to the Navigation File
 
-See these articles for information about how to set up the application layout:
+* @$ $ rails generate layout:navigation@
 
-* "*Rails Application Layout*":http://railsapps.github.io/rails-default-application-layout.html
-* "*Rails and Bootstrap*":http://railsapps.github.io/twitter-bootstrap-rails.html
-* "*Rails and Foundation*":http://railsapps.github.io/rails-foundation.html
+h4. Generate Devise Views
+
+* @$ rails generate layout:devise foundation5@
+* @$ rails generate layout:devise bootstrap3@
 
 h2. Installing a Front-End Framework
 
-Instead of following the "instructions for Bootstrap":http://railsapps.github.io/twitter-bootstrap-rails.html or "Zurb Foundation":http://foundation.zurb.com/docs/rails.html to install a front-end framework, add the gems you need. Then use the RailsLayout gem. It will set up your assets files.
+Refer to instructions for:
+
+* "Foundation and Rails":http://railsapps.github.io/rails-foundation.html
+* "Bootstrap and Rails":http://railsapps.github.io/twitter-bootstrap-rails.html
+
+In summary, to install a front-end framework, add the gems you need. Then use the RailsLayout gem. It will set up your assets files.
 
 Add the gems you need to your Rails application Gemfile:
-
-h4. Bootstrap 2.3
-
-<pre>
-gem 'bootstrap-sass', '~> 2.3.2.2'
-</pre>
-
-h4. Bootstrap 3.0
-
-<pre>
-gem 'bootstrap-sass'
-</pre>
-
-h4. Zurb Foundation 4.0
-
-<pre>
-gem 'compass-rails'
-gem 'zurb-foundation'
-</pre>
 
 h4. Zurb Foundation 5.0
 
@@ -124,6 +56,25 @@ Note: Check the status of these issues before using Foundation 5.0:
 
 * "Foundation 5 requires JavaScript included in BODY not HEAD":https://github.com/zurb/foundation/issues/3643
 * "Foundation 5 topbar incompatible with Rails Turbolinks":https://github.com/zurb/foundation/issues/3642
+
+h4. Zurb Foundation 4.0
+
+<pre>
+gem 'compass-rails'
+gem 'zurb-foundation'
+</pre>
+
+h4. Bootstrap 3.0
+
+<pre>
+gem 'bootstrap-sass'
+</pre>
+
+h4. Bootstrap 2.3
+
+<pre>
+gem 'bootstrap-sass', '~> 2.3.2.2'
+</pre>
 
 h4. Use Bundler
 
@@ -159,131 +110,90 @@ Use Bundler to install the gem:
 $ bundle install
 </pre>
 
-h2. Generate an Application Layout
+h2. The "layout:install" Command
 
-Generate application layout files for the framework you will use.
+The command will rename *application.css* to *application.css.scss*.
 
-h3. Generate a Simple Layout
+It will add:
 
-To create a set of simple layout files:
+* *framework_and_overrides.css.scss*
 
-<pre>
-$ rails generate layout simple
-</pre>
+And modify the JavaScript asset file:
 
-Use @--force@ if you want to overwrite existing files:
+* *application.js*
 
-<pre>
-$ rails generate layout simple --force
-</pre>
+It will set up a default application layout.
 
-See the files that are generated:
+It creates partials for:
 
-* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/simple-application.html.erb
-* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/simple-messages.html.erb
-* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/simple-navigation.html.erb
-* "app/assets/stylesheets/simple.css":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/simple.css
+* Rails flash messages
+* navigation links
 
-The RailsLayout gem will create the file:
+h4. Supported Frameworks
 
-* "app/assets/stylesheets/application.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/application.css.scss
+You can generate layout files suitable for use with the following front-end frameworks:
 
-h3. Bootstrap 2.3 Layout
+* @foundation5@ - Zurb Foundation 5.0
+* @foundation4@ - Zurb Foundation 4.0
+* @bootstrap3@ - Bootstrap 3.0
+* @bootstrap2@ - Bootstrap 2.3
+* @simple@ - simple layout
+* @none@ - removes all changes
 
-To create layout files for use with Bootstrap 2.3:
+h4. Generated Files
 
-<pre>
-$ rails generate layout bootstrap2
-</pre>
+The RailsLayout gem generates application layout files:
 
-Use @--force@ if you want to overwrite existing files:
+* app/views/layouts/application.html.erb
+* app/views/layouts/_messages.html.erb
+* app/views/layouts/_navigation.html.erb
+* app/views/layouts/_navigation_links.html.erb
 
-<pre>
-$ rails generate layout bootstrap2 --force
-</pre>
+Additionally, when the @simple@ option is selected:
 
-See the files that are generated:
+* app/assets/stylesheets/simple.css
 
-* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2-application.html.erb
-* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2-messages.html.erb
-* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2-navigation.html.erb
+h4. Note About the Navigation Partials
 
-The RailsLayout gem will create the file:
+Two navigation partials are created:
 
-* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2_and_overrides.css.scss
+* app/views/layouts/_navigation_links.html.erb
+* app/views/layouts/_navigation.html.erb
 
-and modify the file:
+The first file contains no framework-specific styling. It is only a list of links. You can add additional links to this file as needed.
 
-* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap-application.js
+The second file contains framework-specific styling.
 
-h3. Bootstrap 3.0 Layout
+h4. Support for ERB, Haml, or Slim
 
-To create layout files for use with Bootstrap 3.0:
+If you are using ERB for Rails views, the RailsLayout gem will generate ERB files.
 
-<pre>
-$ rails generate layout bootstrap3
-</pre>
+If you are using Haml or Slim, the RailsLayout gem will generate Haml or Slim files instead.
 
-Use @--force@ if you want to overwrite existing files:
+h4. Additional Documentation
 
-<pre>
-$ rails generate layout bootstrap3 --force
-</pre>
+See these articles for information about how to set up the application layout:
 
-See the files that are generated:
+* "*Rails Application Layout*":http://railsapps.github.io/rails-default-application-layout.html
+* "*Rails and Bootstrap*":http://railsapps.github.io/twitter-bootstrap-rails.html
+* "*Rails and Foundation*":http://railsapps.github.io/rails-foundation.html
 
-* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3-application.html.erb
-* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3-messages.html.erb
-* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3-navigation.html.erb
+Look at the "Learn Rails":https://github.com/RailsApps/learn-rails example application to see how the generated files from the RailsLayout gem are used. You'll find details about the example application in the book "Learn Ruby on Rails":http://learn-rails.com/learn-ruby-on-rails.html.
 
-The RailsLayout gem will create the file:
-
-* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3_and_overrides.css.scss
-
-and modify the file:
-
-* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap-application.js
-
-h3. Zurb Foundation 4.0 Layout
-
-To create layout files for use with Zurb Foundation 4.0:
-
-<pre>
-$ rails generate layout foundation4
-</pre>
-
-Use @--force@ if you want to overwrite existing files:
-
-<pre>
-$ rails generate layout foundation4 --force
-</pre>
-
-See the files that are generated:
-
-* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-application.html.erb
-* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-messages.html.erb
-* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-navigation.html.erb
-
-The RailsLayout gem will create the file:
-
-* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4_and_overrides.css.scss
-
-and modify the file:
-
-* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-application.js
+!http://railsapps.github.io/images/learn-rails-cover-130x161.jpg(Learn Ruby on Rails)!:http://learn-rails.com/learn-ruby-on-rails.html
 
 h3. Zurb Foundation 5.0 Layout
 
 To create layout files for use with Zurb Foundation 5.0:
 
 <pre>
-$ rails generate layout foundation5
+$ rails generate layout:install foundation5
 </pre>
 
 Use @--force@ if you want to overwrite existing files:
 
 <pre>
-$ rails generate layout foundation5 --force
+$ rails generate layout:install foundation5 --force
 </pre>
 
 See the files that are generated:
@@ -300,12 +210,121 @@ and modify the file:
 
 * "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation5-application.js
 
+h3. Zurb Foundation 4.0 Layout
+
+To create layout files for use with Zurb Foundation 4.0:
+
+<pre>
+$ rails generate layout:install foundation4
+</pre>
+
+Use @--force@ if you want to overwrite existing files:
+
+<pre>
+$ rails generate layout:install foundation4 --force
+</pre>
+
+See the files that are generated:
+
+* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-application.html.erb
+* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-messages.html.erb
+* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-navigation.html.erb
+
+The RailsLayout gem will create the file:
+
+* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4_and_overrides.css.scss
+
+and modify the file:
+
+* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-application.js
+
+h3. Bootstrap 3.0 Layout
+
+To create layout files for use with Bootstrap 3.0:
+
+<pre>
+$ rails generate layout:install bootstrap3
+</pre>
+
+Use @--force@ if you want to overwrite existing files:
+
+<pre>
+$ rails generate layout:install bootstrap3 --force
+</pre>
+
+See the files that are generated:
+
+* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3-application.html.erb
+* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3-messages.html.erb
+* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3-navigation.html.erb
+
+The RailsLayout gem will create the file:
+
+* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3_and_overrides.css.scss
+
+and modify the file:
+
+* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap-application.js
+
+h3. Bootstrap 2.3 Layout
+
+To create layout files for use with Bootstrap 2.3:
+
+<pre>
+$ rails generate layout:install bootstrap2
+</pre>
+
+Use @--force@ if you want to overwrite existing files:
+
+<pre>
+$ rails generate layout:install bootstrap2 --force
+</pre>
+
+See the files that are generated:
+
+* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2-application.html.erb
+* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2-messages.html.erb
+* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2-navigation.html.erb
+
+The RailsLayout gem will create the file:
+
+* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2_and_overrides.css.scss
+
+and modify the file:
+
+* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap-application.js
+
+h3. Generate a Simple Layout
+
+To create a set of simple layout files:
+
+<pre>
+$ rails generate layout:install simple
+</pre>
+
+Use @--force@ if you want to overwrite existing files:
+
+<pre>
+$ rails generate layout:install simple --force
+</pre>
+
+See the files that are generated:
+
+* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/simple-application.html.erb
+* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/simple-messages.html.erb
+* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/simple-navigation.html.erb
+* "app/assets/stylesheets/simple.css":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/simple.css
+
+The RailsLayout gem will create the file:
+
+* "app/assets/stylesheets/application.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/application.css.scss
+
 h3. Reverting to None
 
 To revert your application to a default application layout:
 
 <pre>
-$ rails generate layout none
+$ rails generate layout:install none
 </pre>
 
 The RailsLayout gem will remove any files it may have added:
@@ -324,12 +343,14 @@ Additionally, it will restore these files to the default versions:
 
 The file *app/assets/stylesheets/application.css.scss* will contain a CSS rule but you can ignore it or remove it.
 
-h2. Navigation Links for Devise
+h2. The "layout:navigation" Command
 
 If you are using Devise for authentication, you can generate a navigation links partial containing links for Devise.
 
+This command is used to populate the navigation bar in starter applications created by the "Rails Composer":http://railsapps.github.io/rails-composer/ tool.
+
 <pre>
-$ rails generate navigation --force
+$ rails generate layout:navigation --force
 </pre>
 
 This creates a file *app/views/layouts/_navigation_links.html.erb*:
@@ -362,17 +383,26 @@ The full set of links will be created if the following files are found in your a
 * app/views/devise/registrations/new.html.erb
 * app/views/users/index.html.erb
 
-These files will be present in your application if you have created custom views for Devise.
+h2. The "layout:devise" Command
 
-The @rails generate navigation@ command is used to populate the navigation bar in starter applications created by the "Rails Composer":http://railsapps.github.io/rails-composer/ tool.
+"Devise":https://github.com/plataformatec/devise is a gem for authentication and user management (signup, login, and related features). Devise provides a utility command @rails generate devise:views@. The Devise command creates view files for signup, login, and related features. However, the views generated by Devise lack CSS styling.
 
-h2. Help
-
-To see help messages:
+Use the RailsLayout gem to generate Devise views with styling for Bootstrap or Foundation.
 
 <pre>
-$ rails generate layout --help
+$ rails generate layout:devise
 </pre>
+
+The command will create (or replace) these files:
+
+* app/views/devise/sessions/new.html.erb
+* (TODO: more to come)
+
+Additionally, the command will append Sass mixins to accommodate Bootstrap or Foundation to the file:
+
+* app/assets/stylesheets/framework_and_overrides.css.scss
+
+The Sass mixins allow any view to be used with either Bootstrap or Foundation (so we don't have to maintain separate views for each front-end framework).
 
 h2. Issues
 
@@ -390,6 +420,6 @@ h2. MIT License
 
 "MIT License":http://www.opensource.org/licenses/mit-license
 
-Copyright © 2013 Daniel Kehoe
+Copyright © 2013-2014 Daniel Kehoe
 
 !https://cruel-carlota.pagodabox.com/b096716fb733287d5c3d5eec65aaa26b(githalytics.com alpha)!

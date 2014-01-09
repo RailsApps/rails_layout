@@ -1,3 +1,3 @@
 module RailsLayout
-  VERSION = "0.5.11"
+  VERSION = "1.0.0"
 end

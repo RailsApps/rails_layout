@@ -1,6 +1,6 @@
 h1. CHANGELOG
 
-h3. 1.0.0 unreleased
+h3. 1.0.0 January 9, 2014
 
 * generate Devise views (login view)
 * change generator commands (described in README)
