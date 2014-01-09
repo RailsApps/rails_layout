@@ -395,9 +395,8 @@ h2. The "layout:devise" Command
 
 Use the RailsLayout gem to generate Devise views with styling for Bootstrap or Foundation.
 
-<pre>
-$ rails generate layout:devise
-</pre>
+* @$ rails generate layout:devise foundation5@
+* @$ rails generate layout:devise bootstrap3@
 
 The command will create (or replace) these files:
 
@@ -409,6 +408,10 @@ Additionally, the command will append Sass mixins to accommodate Bootstrap or Fo
 * app/assets/stylesheets/framework_and_overrides.css.scss
 
 The Sass mixins allow any view to be used with either Bootstrap or Foundation (so we don't have to maintain separate views for each front-end framework).
+
+h4. Limitations
+
+At this time, with the "layout:devise" command, only Foundation 5 or Bootstrap 3 are supported. Files are not generated for Haml or Slim.
 
 h2. Issues
 
