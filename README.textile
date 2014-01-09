@@ -15,6 +15,12 @@ h4. Rails Composer
 
 The RailsLayout gem is used by "Rails Composer":http://railsapps.github.io/rails-composer/ tool, an application template used to create starter applications. You can use Rails Composer to generate entire applications.
 
+h4. !http://railsapps.github.io/images/join/join-railsapps.png(Join RailsApps)!:http://railsapps.github.io/
+
+h4. Support the RailsApps Project
+
+If the RailsLayout gem is useful to you, please accept our invitation to "join the RailsApps project":http://railsapps.github.io/. The RailsApps project provides example applications, tutorials, and starter tools, including the RailsLayout gem.
+
 h2. Command Summary
 
 h4. Generate Application Layout, Navigation, and Flash Message Files
