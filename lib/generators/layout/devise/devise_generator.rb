@@ -30,6 +30,9 @@ module Layout
       # Add Devise views
       def add_devise_views
         copy_file 'sessions/new.html.erb', 'app/views/devise/sessions/new.html.erb'
+        copy_file 'passwords/new.html.erb', 'app/views/devise/passwords/new.html.erb'
+        copy_file 'registrations/new.html.erb', 'app/views/devise/registrations/new.html.erb'
+        copy_file 'registrations/edit.html.erb', 'app/views/devise/registrations/edit.html.erb'
       end
 
     end

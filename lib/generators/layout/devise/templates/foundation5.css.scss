@@ -9,9 +9,12 @@
 }
 .authform form {
   @include panel();
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 .authform form a {
+  font-size: rem-calc(13);
+}
+.authform form p {
   font-size: rem-calc(13);
 }
 .authform .form-group {
@@ -22,4 +25,15 @@
 }
 .authform .checkbox {
   // for Bootstrap, not used for Foundation
+}
+.authform fieldset {
+  @include panel();
+}
+.authform #error_explanation {
+  @extend .alert-box;
+  @extend .alert;
+}
+.authform #error_explanation h2 {
+  font-size: rem-calc(16);
+  color: white;
 }

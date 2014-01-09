@@ -10,6 +10,7 @@
 .authform form {
   @extend .well;
   @extend .well-lg;
+  padding-bottom: 40px;
 }
 .authform .right {
   float: right !important;
@@ -17,4 +18,14 @@
 .authform .button {
   @extend .btn;
   @extend .btn-primary;
+}
+.authform fieldset {
+  @extend .well;
+}
+#error_explanation {
+  @extend .alert;
+  @extend .alert-danger;
+}
+#error_explanation h2 {
+  font-size: 16px;
 }
