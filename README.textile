@@ -401,9 +401,11 @@ Use the RailsLayout gem to generate Devise views with styling for Bootstrap or F
 The command will create (or replace) these files:
 
 * app/views/devise/sessions/new.html.erb
-* (TODO: more to come)
+* app/views/devise/passwords/new.html.erb
+* app/views/devise/registrations/edit.html.erb
+* app/views/devise/registrations/new.html.erb
 
-Additionally, the command will append Sass mixins to accommodate Bootstrap or Foundation to the file:
+Additionally, the command will update a file to append Sass mixins to accommodate Bootstrap or Foundation:
 
 * app/assets/stylesheets/framework_and_overrides.css.scss
 
