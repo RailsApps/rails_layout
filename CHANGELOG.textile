@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.2 January 11, 2014
+
+* don't include a custom 'name' field in the Devise views (fixes issue #12)
+
 h3. 1.0.1 January 9, 2014
 
 * generate Devise views (new account, edit account, forgot password)
