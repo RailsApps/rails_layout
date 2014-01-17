@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.4 January 16, 2014
+
+* Foundation 5.0.3 is now compatible with Rails Turbolinks and the asset pipeline
+
 h3. 1.0.3 January 11, 2014
 
 * add missing 'autofocus' to Devise views
