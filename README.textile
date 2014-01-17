@@ -58,10 +58,7 @@ h4. Zurb Foundation 5.0
 gem 'foundation-rails'
 </pre>
 
-Note: Check the status of these issues before using Foundation 5.0:
-
-* "Foundation 5 requires JavaScript included in BODY not HEAD":https://github.com/zurb/foundation/issues/3643
-* "Foundation 5 topbar incompatible with Rails Turbolinks":https://github.com/zurb/foundation/issues/3642
+Foundation 5.0.3 was released January 15, 2014. Foundation versions 5.0.1 and 5.0.2 were "incompatible with Rails Turbolinks":https://github.com/zurb/foundation/issues/3642 and the Rails asset pipeline, so use 5.0.3 or newer with Rails.
 
 h4. Zurb Foundation 4.0
 
