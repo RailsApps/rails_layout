@@ -201,17 +201,17 @@ $ rails generate layout:install foundation5 --force
 
 See the files that are generated:
 
-* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation5-application.html.erb
-* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-messages.html.erb
-* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation5-navigation.html.erb
+* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation5-application.html.erb
+* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation4-messages.html.erb
+* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation5-navigation.html.erb
 
 The RailsLayout gem will create the file:
 
-* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation5_and_overrides.css.scss
+* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation5_and_overrides.css.scss
 
 and modify the file:
 
-* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation5-application.js
+* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation5-application.js
 
 h3. Zurb Foundation 4.0 Layout
 
@@ -229,17 +229,17 @@ $ rails generate layout:install foundation4 --force
 
 See the files that are generated:
 
-* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-application.html.erb
-* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-messages.html.erb
-* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-navigation.html.erb
+* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation4-application.html.erb
+* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation4-messages.html.erb
+* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation4-navigation.html.erb
 
 The RailsLayout gem will create the file:
 
-* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4_and_overrides.css.scss
+* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation4_and_overrides.css.scss
 
 and modify the file:
 
-* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/foundation4-application.js
+* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation4-application.js
 
 h3. Bootstrap 3.0 Layout
 
@@ -257,17 +257,17 @@ $ rails generate layout:install bootstrap3 --force
 
 See the files that are generated:
 
-* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3-application.html.erb
-* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3-messages.html.erb
-* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3-navigation.html.erb
+* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/bootstrap3-application.html.erb
+* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/bootstrap3-messages.html.erb
+* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/bootstrap3-navigation.html.erb
 
 The RailsLayout gem will create the file:
 
-* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap3_and_overrides.css.scss
+* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/bootstrap3_and_overrides.css.scss
 
 and modify the file:
 
-* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap-application.js
+* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/bootstrap-application.js
 
 h3. Bootstrap 2.3 Layout
 
@@ -285,17 +285,17 @@ $ rails generate layout:install bootstrap2 --force
 
 See the files that are generated:
 
-* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2-application.html.erb
-* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2-messages.html.erb
-* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2-navigation.html.erb
+* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/bootstrap2-application.html.erb
+* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/bootstrap2-messages.html.erb
+* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/bootstrap2-navigation.html.erb
 
 The RailsLayout gem will create the file:
 
-* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap2_and_overrides.css.scss
+* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/bootstrap2_and_overrides.css.scss
 
 and modify the file:
 
-* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/bootstrap-application.js
+* "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/bootstrap-application.js
 
 h3. Generate a Simple Layout
 
@@ -313,14 +313,14 @@ $ rails generate layout:install simple --force
 
 See the files that are generated:
 
-* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/simple-application.html.erb
-* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/simple-messages.html.erb
-* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/simple-navigation.html.erb
-* "app/assets/stylesheets/simple.css":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/simple.css
+* "app/views/layouts/application.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/simple-application.html.erb
+* "app/views/layouts/_messages.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/simple-messages.html.erb
+* "app/views/layouts/_navigation.html.erb":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/simple-navigation.html.erb
+* "app/assets/stylesheets/simple.css":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/simple.css
 
 The RailsLayout gem will create the file:
 
-* "app/assets/stylesheets/application.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/templates/application.css.scss
+* "app/assets/stylesheets/application.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/application.css.scss
 
 h3. Reverting to None
 
