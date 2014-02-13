@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.6 February 13, 2014
+
+* add OmniAuth navigation links
+
 h3. 1.0.5 January 16, 2014
 
 * Modernizr must be loaded before Foundation

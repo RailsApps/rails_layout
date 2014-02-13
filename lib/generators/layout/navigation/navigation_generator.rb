@@ -47,6 +47,17 @@ LINKS
 LINKS
           end
         end
+        # OMNIAUTH
+        if Dir.glob("config/initializers/omniauth.rb").any?
+          append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
+<% if user_signed_in? %>
+  <li><%= link_to 'Logout', signout_path %></li>
+<% else %>
+  <li><%= link_to 'Login', signin_path %></li>
+<% end %>
+LINKS
+          end
+        end
       end
 
     end

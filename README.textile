@@ -3,8 +3,11 @@ h1. !http://railsapps.github.io/images/rails-36x36.jpg(RailsLayout Gem)! RailsLa
 Use this gem to set up layout files for your choice of front-end framework:
 
 * Zurb Foundation 5.0
-* Zurb Foundation 4.0
 * Bootstrap 3.0
+
+Or earlier versions:
+
+* Zurb Foundation 4.0
 * Bootstrap 2.3
 
 Plus it will set up "Devise":https://github.com/plataformatec/devise views with styling for Bootstrap or Foundation.
@@ -34,7 +37,7 @@ h4. Generate Application Layout, Navigation, and Flash Message Files
 
 h4. Add Links to the Navigation File
 
-* @$ $ rails generate layout:navigation@
+* @$ rails generate layout:navigation@
 
 h4. Generate Devise Views
 
@@ -163,9 +166,9 @@ Two navigation partials are created:
 * app/views/layouts/_navigation_links.html.erb
 * app/views/layouts/_navigation.html.erb
 
-The first file contains no framework-specific styling. It is only a list of links. You can add additional links to this file as needed.
+The *_navigation_links.html.erb* file is only a list of links. You can add additional links to this file as needed. It contains no framework-specific styling.
 
-The second file contains framework-specific styling.
+The *_navigation.html.erb* file contains framework-specific styling. Separating the files makes it easy to change the front-end framework without disturbing the links.
 
 h4. Support for ERB, Haml, or Slim
 
@@ -348,7 +351,7 @@ The file *app/assets/stylesheets/application.css.scss* will contain a CSS rule b
 
 h2. The "layout:navigation" Command
 
-If you are using Devise for authentication, you can generate a navigation links partial containing links for Devise.
+If you are using Devise or OmniAuth for authentication, you can generate a navigation links partial containing appropriate links.
 
 This command is used to populate the navigation bar in starter applications created by the "Rails Composer":http://railsapps.github.io/rails-composer/ tool.
 
@@ -356,7 +359,7 @@ This command is used to populate the navigation bar in starter applications crea
 $ rails generate layout:navigation --force
 </pre>
 
-This creates a file *app/views/layouts/_navigation_links.html.erb*:
+Here's an example of a file *app/views/layouts/_navigation_links.html.erb* appropriate for Devise:
 
 <pre>
 <%# add navigation links to this file %>
