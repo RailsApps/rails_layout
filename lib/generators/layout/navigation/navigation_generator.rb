@@ -16,20 +16,14 @@ module Layout
         append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'About', page_path('about') %></li>\n" if File.exists?("app/views/pages/about.html.#{ext}")
         # CONTACT
         append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'Contact', new_contact_path %></li>\n" if File.exists?("app/views/contacts/new.html.#{ext}")
-        # DEVISE LOGIN and LOGOUT
-        if Dir.glob("app/views/devise/sessions/new.html.{#{ext},erb}").any?
+        # DEVISE
+        if File.exists?('config/initializers/devise.rb')
           append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
 <% if user_signed_in? %>
   <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
 <% else %>
   <li><%= link_to 'Login', new_user_session_path %></li>
 <% end %>
-LINKS
-          end
-        end
-        # DEVISE SIGN UP
-        if Dir.glob("app/views/devise/registrations/new.html.{#{ext},erb}").any?
-          append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
 <% if user_signed_in? %>
   <li><%= link_to 'Edit account', edit_user_registration_path %></li>
 <% else %>
@@ -38,7 +32,7 @@ LINKS
 LINKS
           end
         end
-        # USERS LINK
+        # USERS
         if Dir.glob("app/views/users/index.html.{#{ext},erb}").any?
           append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
 <% if user_signed_in? %>
@@ -48,7 +42,7 @@ LINKS
           end
         end
         # OMNIAUTH
-        if Dir.glob("config/initializers/omniauth.rb").any?
+        if File.exists?('config/initializers/omniauth.rb')
           append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
 <% if user_signed_in? %>
   <li><%= link_to 'Logout', signout_path %></li>

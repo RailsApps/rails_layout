@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.7 February 15, 2014
+
+* generate Devise navigation links when Devise initializer is present
+
 h3. 1.0.6 February 13, 2014
 
 * add OmniAuth navigation links
