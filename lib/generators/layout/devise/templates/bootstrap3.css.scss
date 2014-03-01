@@ -29,3 +29,8 @@
 #error_explanation h2 {
   font-size: 16px;
 }
+.button-xs {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-xs;
+}

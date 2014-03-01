@@ -37,3 +37,8 @@
   font-size: rem-calc(16);
   color: white;
 }
+.button-xs {
+  @extend .button;
+  @extend .radius;
+  @extend .tiny;
+}

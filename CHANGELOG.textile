@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.10 February 28, 2014
+
+* add a 'button-xs' class to the CSS styles
+
 h3. 1.0.9 February 28, 2014
 
 * fix wrong color for flash messages under Rails 4.1 (fixes #16)
