@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.9 February 28, 2014
+
+* fix wrong color for flash messages under Rails 4.1 (fixes #16)
+
 h3. 1.0.8 February 24, 2014
 
 * add 'name' field to Devise registration forms if 'name' is an attribute in the User object
