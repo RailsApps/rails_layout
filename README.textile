@@ -58,10 +58,8 @@ Add the gems you need to your Rails application Gemfile:
 h4. Zurb Foundation 5.0
 
 <pre>
-gem 'foundation-rails', '5.0.3.1'
+gem 'foundation-rails'
 </pre>
-
-Foundation versions 5.0.1 and 5.0.2 were "incompatible with Rails Turbolinks":https://github.com/zurb/foundation/issues/3642 and the Rails asset pipeline. The foundation-rails gem version 5.1.1.0 is incompatible with the Rails asset pipeline. Use foundation-rails gem version 5.0.3.1 pending resolution of the "issue":https://github.com/zurb/foundation/issues/4494.
 
 h4. Zurb Foundation 4.0
 
