@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.11 March 8, 2014
+
+* Foundation 5.2 no longer needs a 'span' in the navigation bar
+
 h3. 1.0.10 February 28, 2014
 
 * add a 'button-xs' class to the CSS styles
