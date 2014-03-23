@@ -3,6 +3,7 @@ h1. CHANGELOG
 h3. 1.0.12 March 23, 2014
 
 * Rails 4.1.0 changes the application.css file
+* Rails 4.1.0 changes quote marks in the application.html.erb file
 
 h3. 1.0.11 March 8, 2014
 
