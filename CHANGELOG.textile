@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.13 March 23, 2014
+
+* change quote marks around 'vendor/modernizr'
+
 h3. 1.0.12 March 23, 2014
 
 * Rails 4.1.0 changes the application.css file
