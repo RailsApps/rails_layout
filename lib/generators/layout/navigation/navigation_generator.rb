@@ -20,13 +20,10 @@ module Layout
         if File.exists?('config/initializers/devise.rb')
           append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
 <% if user_signed_in? %>
+  <li><%= link_to 'Edit account', edit_user_registration_path %></li>
   <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
 <% else %>
   <li><%= link_to 'Login', new_user_session_path %></li>
-<% end %>
-<% if user_signed_in? %>
-  <li><%= link_to 'Edit account', edit_user_registration_path %></li>
-<% else %>
   <li><%= link_to 'Sign up', new_user_registration_path %></li>
 <% end %>
 LINKS
