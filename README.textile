@@ -61,6 +61,8 @@ h4. Zurb Foundation 5.0
 gem 'foundation-rails'
 </pre>
 
+See a note below about a necessary change to the *config/application.rb* file.
+
 h4. Zurb Foundation 4.0
 
 <pre>
@@ -213,6 +215,25 @@ The RailsLayout gem will create the file:
 and modify the file:
 
 * "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation5-application.js
+
+h4. config/application.rb
+
+The rails_layout gem will make a necessary change to the *config/application.rb* file. It will add:
+
+<pre>
+module RailsFoundation
+  class Application < Rails::Application
+    .
+    .
+    .
+    # For Foundation 5
+    config.assets.precompile += %w( vendor/modernizr )
+
+  end
+end
+</pre>
+
+See "issue 19":https://github.com/RailsApps/rails_layout/issues/19 for an explanation.
 
 h3. Zurb Foundation 4.0 Layout
 
