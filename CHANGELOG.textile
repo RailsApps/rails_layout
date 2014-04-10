@@ -1,6 +1,6 @@
 h1. CHANGELOG
 
-h3. 1.0.14 unreleased
+h3. 1.0.14 April 9, 2014
 
 * workaround for Rails 4.1.2 pending releaase of bootstrap-sass 3.1.2 (fixes #20)
 * modify 'config/application.rb' for Foundation 5 (fixes #19)
