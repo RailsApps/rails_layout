@@ -5,7 +5,6 @@ h3. 1.0.14 unreleased
 * workaround for Rails 4.1.2 pending releaase of bootstrap-sass 3.1.2 (fixes #20)
 * modify 'config/application.rb' for Foundation 5 (fixes #19)
 * remove unnecessary conditional on Bootstrap navlinks partial (contributed by Arnel Bucio)
-* push Bootstrap navlinks to the right (contributed by Arnel Bucio)
 
 h3. 1.0.13 March 23, 2014
 
