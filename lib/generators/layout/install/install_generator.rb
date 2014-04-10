@@ -47,6 +47,7 @@ module Layout
             copy_file 'foundation5-application.js', 'app/assets/javascripts/application.js'
             remove_file 'app/assets/stylesheets/simple.css'
             remove_file 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
+            insert_into_file('config/application.rb', "\n\n    # For Foundation 5\n    config.assets.precompile += %w( vendor/modernizr )\n", :after => /^ *# config.i18n.default_locale = :de/, :force => false)
         end
         if Rails::VERSION::MAJOR.to_s == "3"
           gsub_file 'app/assets/javascripts/application.js', /\/\/= require turbolinks\n/, ''

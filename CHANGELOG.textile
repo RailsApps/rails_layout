@@ -2,8 +2,9 @@ h1. CHANGELOG
 
 h3. 1.0.14 unreleased
 
+* modify 'config/application.rb' for Foundation 5 (fixes #19)
 * remove unnecessary conditional on Bootstrap navlinks partial (contributed by Arnel Bucio)
-* push navigation links to the right (contributed by Arnel Bucio)
+* push Bootstrap navlinks to the right (contributed by Arnel Bucio)
 
 h3. 1.0.13 March 23, 2014
 
