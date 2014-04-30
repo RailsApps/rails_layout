@@ -5,24 +5,24 @@ Use this gem to set up layout files for your choice of front-end framework:
 * Zurb Foundation 5.0
 * Bootstrap 3.0
 
-Or earlier versions:
-
-* Zurb Foundation 4.0
-* Bootstrap 2.3
-
-Plus it will set up "Devise":https://github.com/plataformatec/devise views with styling for Bootstrap or Foundation.
+It also will set up "Devise":https://github.com/plataformatec/devise views with styling for Bootstrap or Foundation.
 
 RailsLayout is a utility gem to use during development.
 
-h4. Rails Composer
+h4. Other Tools
 
 The RailsLayout gem is used by "Rails Composer":http://railsapps.github.io/rails-composer/ tool, an application template used to create starter applications. You can use Rails Composer to generate entire applications.
+
+If you like the RailsLayout gem, you might be interested in the "RailsApps Testing gem":https://github.com/RailsApps/rails_apps_testing sets up a testing framework for Rails.
 
 h4. !http://railsapps.github.io/images/join/join-railsapps.png(Join RailsApps)!:http://railsapps.github.io/
 
 h4. Support the RailsApps Project
 
 If the RailsLayout gem is useful to you, please accept our invitation to "join the RailsApps project":http://railsapps.github.io/. The RailsApps project provides example applications, tutorials, and starter tools, including the RailsLayout gem.
+
+If you like the RailsAppsTesting gem, you might be interested in the "RailsLayout gem":https://github.com/RailsApps/rails_layout which generates Rails application layout files for various front-end frameworks such as Bootstrap and Foundation.
+
 
 h2. Command Summary
 
