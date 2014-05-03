@@ -30,12 +30,29 @@ LINKS
           end
         end
         # USERS
-        if Dir.glob("app/views/users/index.html.{#{ext},erb}").any?
-          append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
+        if Object.const_defined?('User')
+          if User.column_names.include? 'role'
+            # suitable for role-based authorization
+            if Dir.glob("app/views/users/index.html.{#{ext},erb}").any?
+              append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
+<% if user_signed_in? %>
+  <% if current_user.admin? %>
+    <li><%= link_to 'Users', users_path %></li>
+  <% end %>
+<% end %>
+LINKS
+              end
+            end
+          else
+            # suitable for simple authentication
+            if Dir.glob("app/views/users/index.html.{#{ext},erb}").any?
+              append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
 <% if user_signed_in? %>
   <li><%= link_to 'Users', users_path %></li>
 <% end %>
 LINKS
+              end
+            end
           end
         end
         # OMNIAUTH

@@ -1,8 +1,13 @@
 h1. CHANGELOG
 
+h3. 1.0.15 May 3, 2014
+
+* update navlinks partial to accommodate role-based authorization
+* drop workaround after release of bootstrap-sass 3.1.1.1 (fixes #20)
+
 h3. 1.0.14 April 9, 2014
 
-* workaround for Rails 4.1.2 pending releaase of bootstrap-sass 3.1.2 (fixes #20)
+* workaround for Rails 4.1.0 pending release of bootstrap-sass 3.1.1.1 (fixes #20)
 * modify 'config/application.rb' for Foundation 5 (fixes #19)
 * remove unnecessary conditional on Bootstrap navlinks partial (contributed by Arnel Bucio)
 
