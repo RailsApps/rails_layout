@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.16 unreleased
+
+* change "log in" to "sign in" and "logout" to "sign out"
+
 h3. 1.0.15 May 3, 2014
 
 * update navlinks partial to accommodate role-based authorization

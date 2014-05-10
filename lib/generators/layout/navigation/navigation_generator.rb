@@ -21,9 +21,9 @@ module Layout
           append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
 <% if user_signed_in? %>
   <li><%= link_to 'Edit account', edit_user_registration_path %></li>
-  <li><%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %></li>
+  <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
 <% else %>
-  <li><%= link_to 'Login', new_user_session_path %></li>
+  <li><%= link_to 'Sign in', new_user_session_path %></li>
   <li><%= link_to 'Sign up', new_user_registration_path %></li>
 <% end %>
 LINKS
@@ -59,9 +59,9 @@ LINKS
         if File.exists?('config/initializers/omniauth.rb')
           append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
 <% if user_signed_in? %>
-  <li><%= link_to 'Logout', signout_path %></li>
+  <li><%= link_to 'Sign out', signout_path %></li>
 <% else %>
-  <li><%= link_to 'Login', signin_path %></li>
+  <li><%= link_to 'Sign in', signin_path %></li>
 <% end %>
 LINKS
           end
