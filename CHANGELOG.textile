@@ -2,6 +2,7 @@ h1. CHANGELOG
 
 h3. 1.0.16 unreleased
 
+* add missing Devise form for password reset
 * add navigation spec when Devise is used and RSpec is installed
 * change "log in" to "sign in" and "logout" to "sign out"
 
