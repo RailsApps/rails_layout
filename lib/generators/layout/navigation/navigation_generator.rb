@@ -68,6 +68,12 @@ LINKS
         end
       end
 
+      def add_tests
+        return unless File.exists?('config/initializers/devise.rb')
+        return unless File.exists?('spec/spec_helper.rb')
+        copy_file 'navigation_spec.rb', 'spec/features/visitors/navigation_spec.rb'
+      end
+
     end
   end
 end
