@@ -1,6 +1,6 @@
 h1. CHANGELOG
 
-h3. 1.0.16 unreleased
+h3. 1.0.16 May 10, 2014
 
 * add missing Devise form for password reset
 * add navigation spec when Devise is used and RSpec is installed
