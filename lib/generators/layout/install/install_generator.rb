@@ -54,6 +54,25 @@ module Layout
         end
       end
 
+      def add_forms_stylesheet
+        return unless (File.exists?('config/initializers/devise.rb') or File.exists?('config/initializers/omniauth.rb'))
+        dir = File.expand_path("../templates", __FILE__)
+        case framework_name
+          when 'none'
+            # TODO
+          when 'simple'
+            # TODO
+          when 'bootstrap2'
+            # TODO
+          when 'bootstrap3'
+            append_file 'app/assets/stylesheets/framework_and_overrides.css.scss', File.read("#{dir}/bootstrap3-forms.css.scss")
+          when 'foundation4'
+            # TODO
+          when 'foundation5'
+            append_file 'app/assets/stylesheets/framework_and_overrides.css.scss', File.read("#{dir}/foundation5-forms.css.scss")
+        end
+      end
+
       # Create an application layout file with partials for messages and navigation
       def generate_layout
         app = ::Rails.application
