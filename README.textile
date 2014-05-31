@@ -132,6 +132,8 @@ It creates partials for:
 * Rails flash messages
 * navigation links
 
+Additionally, if Devise or OmniAuth is present, the command will add Sass mixins to accommodate forms. The Sass mixins add form styling to be used with either Bootstrap or Foundation (so we don't have to maintain separate views for each front-end framework).
+
 h4. Supported Frameworks
 
 You can generate layout files suitable for use with the following front-end frameworks:
@@ -417,12 +419,6 @@ The command will create (or replace) these files:
 * app/views/devise/passwords/new.html.erb
 * app/views/devise/registrations/edit.html.erb
 * app/views/devise/registrations/new.html.erb
-
-Additionally, the command will update a file to append Sass mixins to accommodate Bootstrap or Foundation:
-
-* app/assets/stylesheets/framework_and_overrides.css.scss
-
-The Sass mixins allow any view to be used with either Bootstrap or Foundation (so we don't have to maintain separate views for each front-end framework).
 
 h4. Limitations
 
