@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.18 June 2, 2014
+
+* update for RSpec 3.0
+
 h3. 1.0.17 May 30, 2014
 
 * add styling for forms when either Devise or OmniAuth is present
