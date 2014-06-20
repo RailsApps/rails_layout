@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.20 June 19, 2014
+
+* generate admin links when OmniAuth is used with Pundit
+
 h3. 1.0.19 June 4, 2014
 
 * "require 'rails_helper'" not needed when it is include in the '.rspec' file
