@@ -12,7 +12,6 @@ module Layout
 
       # Install the desired framework
       def install_framework
-        puts "\n\nHELLO\n\n"
         remove_file 'app/assets/stylesheets/application.css'
         copy_file 'application.css.scss', 'app/assets/stylesheets/application.css.scss'
         case framework_name
