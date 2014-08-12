@@ -2,8 +2,8 @@ h1. !http://railsapps.github.io/images/rails-36x36.jpg(RailsLayout Gem)! RailsLa
 
 Use this gem to set up layout files for your choice of front-end framework:
 
-* Zurb Foundation 5.0
-* Bootstrap 3.0
+* Zurb Foundation 5.3
+* Bootstrap 3.2
 
 It also will set up "Devise":https://github.com/plataformatec/devise views with styling for Bootstrap or Foundation.
 
@@ -52,7 +52,7 @@ In summary, to install a front-end framework, add the gems you need. Then use th
 
 Add the gems you need to your Rails application Gemfile:
 
-h4. Zurb Foundation 5.0
+h4. Zurb Foundation 5.3
 
 <pre>
 gem 'foundation-rails'
@@ -67,7 +67,7 @@ gem 'compass-rails'
 gem 'zurb-foundation'
 </pre>
 
-h4. Bootstrap 3.0
+h4. Bootstrap 3.2
 
 <pre>
 gem 'bootstrap-sass'
@@ -138,9 +138,9 @@ h4. Supported Frameworks
 
 You can generate layout files suitable for use with the following front-end frameworks:
 
-* @foundation5@ - Zurb Foundation 5.0
+* @foundation5@ - Zurb Foundation 5.3
 * @foundation4@ - Zurb Foundation 4.0
-* @bootstrap3@ - Bootstrap 3.0
+* @bootstrap3@ - Bootstrap 3.2
 * @bootstrap2@ - Bootstrap 2.3
 * @simple@ - simple layout
 * @none@ - removes all changes
@@ -187,9 +187,9 @@ Look at the "Learn Rails":https://github.com/RailsApps/learn-rails example appli
 
 !http://railsapps.github.io/images/learn-rails-cover-130x161.jpg(Learn Ruby on Rails)!:http://learn-rails.com/learn-ruby-on-rails.html
 
-h3. Zurb Foundation 5.0 Layout
+h3. Zurb Foundation 5.3 Layout
 
-To create layout files for use with Zurb Foundation 5.0:
+To create layout files for use with Zurb Foundation 5.3:
 
 <pre>
 $ rails generate layout:install foundation5
@@ -262,9 +262,9 @@ and modify the file:
 
 * "app/assets/javascripts/application.js":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation4-application.js
 
-h3. Bootstrap 3.0 Layout
+h3. Bootstrap 3.2 Layout
 
-To create layout files for use with Bootstrap 3.0:
+To create layout files for use with Bootstrap 3.2:
 
 <pre>
 $ rails generate layout:install bootstrap3
