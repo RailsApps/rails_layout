@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.22 September 14, 2014
+
+* add navlink for an admin interface if Upmin is present
+
 h3. 1.0.21 August 12, 2014
 
 * bootstrap-sass v3.2.0 changes

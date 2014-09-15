@@ -62,6 +62,11 @@ LINKS
             end
           end
         end
+        # UPMIN (administrative dashboard)
+        if File.exists?('config/initializers/upmin.rb')
+          navlink = "    <li><%= link_to 'Admin', '/admin' %></li>"
+          inject_into_file 'app/views/layouts/_navigation_links.html.erb', navlink + "\n", :after => "<% if current_user.admin? %>\n"
+        end
       end
 
       def add_tests
