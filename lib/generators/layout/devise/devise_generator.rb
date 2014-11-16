@@ -12,7 +12,9 @@ module Layout
         copy_file 'sessions/new.html.erb', 'app/views/devise/sessions/new.html.erb'
         copy_file 'passwords/new.html.erb', 'app/views/devise/passwords/new.html.erb'
         copy_file 'passwords/edit.html.erb', 'app/views/devise/passwords/edit.html.erb'
-        copy_file 'registrations/new.html.erb', 'app/views/devise/registrations/new.html.erb'
+        unless File.exists?('app/views/devise/registrations/new.html.erb')
+          copy_file 'registrations/new.html.erb', 'app/views/devise/registrations/new.html.erb'
+        end
         copy_file 'registrations/edit.html.erb', 'app/views/devise/registrations/edit.html.erb'
       end
 
