@@ -29,7 +29,7 @@
 .authform fieldset {
   @include panel();
 }
-.authform #error_explanation {
+.authform #error_explanation:not(:empty) {
   @extend .alert-box;
   @extend .alert;
 }

@@ -22,7 +22,7 @@
 .authform fieldset {
   @extend .well;
 }
-#error_explanation {
+#error_explanation:not(:empty) {
   @extend .alert;
   @extend .alert-danger;
 }
