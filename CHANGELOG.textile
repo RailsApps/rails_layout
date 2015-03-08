@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.25 March 8, 2015
+
+* only apply styling for 'error_explanation' when not empty
+
 h3. 1.0.24 November 16, 2014
 
 * don't overwrite a Devise registration view if it already exists
