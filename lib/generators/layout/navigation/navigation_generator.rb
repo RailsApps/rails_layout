@@ -46,7 +46,7 @@ LINKS
             # suitable for role-based authorization
             append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
 <% if user_signed_in? %>
-  <% if current_user.admin? %>
+  <% if current_user.try(:admin?) %>
     <li><%= link_to 'Users', users_path %></li>
   <% end %>
 <% end %>
@@ -65,7 +65,7 @@ LINKS
         # UPMIN (administrative dashboard)
         if File.exists?('config/initializers/upmin.rb')
           navlink = "    <li><%= link_to 'Admin', '/admin' %></li>"
-          inject_into_file 'app/views/layouts/_navigation_links.html.erb', navlink + "\n", :after => "<% if current_user.admin? %>\n"
+          inject_into_file 'app/views/layouts/_navigation_links.html.erb', navlink + "\n", :after => "<% if current_user.try(:admin?) %>\n"
         end
       end
 

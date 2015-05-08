@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.26 May 8, 2015
+
+* use Rails 'try' when testing if the current_user is an admin (contributed by bogdanvlviv)
+
 h3. 1.0.25 March 8, 2015
 
 * only apply styling for 'error_explanation' when not empty
