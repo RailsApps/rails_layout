@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.27 October 18, 2015
+
+* create a file '1st_load_framework' instead of 'framework_and_overrides' to force loading a framework first (the asset pipeline loads files in a tree in alpha order)
+
 h3. 1.0.26 May 8, 2015
 
 * use Rails 'try' when testing if the current_user is an admin (contributed by bogdanvlviv)

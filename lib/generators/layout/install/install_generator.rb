@@ -20,30 +20,30 @@ module Layout
             remove_file 'app/assets/stylesheets/simple.css'
             remove_file 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
             remove_file 'app/assets/stylesheets/foundation_and_overrides.css.scss'
-            remove_file 'app/assets/stylesheets/framework_and_overrides.css.scss'
+            remove_file 'app/assets/stylesheets/1st_load_framework.css.scss'
           when 'simple'
             copy_file 'simple.css', 'app/assets/stylesheets/simple.css'
             copy_file 'application.js', 'app/assets/javascripts/application.js'
             remove_file 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
             remove_file 'app/assets/stylesheets/foundation_and_overrides.css.scss'
-            remove_file 'app/assets/stylesheets/framework_and_overrides.css.scss'
+            remove_file 'app/assets/stylesheets/1st_load_framework.css.scss'
           when 'bootstrap2'
-            copy_file 'bootstrap2_and_overrides.css.scss', 'app/assets/stylesheets/framework_and_overrides.css.scss'
+            copy_file 'bootstrap2_and_overrides.css.scss', 'app/assets/stylesheets/1st_load_framework.css.scss'
             copy_file 'bootstrap-application.js', 'app/assets/javascripts/application.js'
             remove_file 'app/assets/stylesheets/simple.css'
             remove_file 'app/assets/stylesheets/foundation_and_overrides.css.scss'
           when 'bootstrap3'
-            copy_file 'bootstrap3_and_overrides.css.scss', 'app/assets/stylesheets/framework_and_overrides.css.scss'
+            copy_file 'bootstrap3_and_overrides.css.scss', 'app/assets/stylesheets/1st_load_framework.css.scss'
             copy_file 'bootstrap-application.js', 'app/assets/javascripts/application.js'
             remove_file 'app/assets/stylesheets/simple.css'
             remove_file 'app/assets/stylesheets/foundation_and_overrides.css.scss'
           when 'foundation4'
-            copy_file 'foundation4_and_overrides.css.scss', 'app/assets/stylesheets/framework_and_overrides.css.scss'
+            copy_file 'foundation4_and_overrides.css.scss', 'app/assets/stylesheets/1st_load_framework.css.scss'
             copy_file 'foundation4-application.js', 'app/assets/javascripts/application.js'
             remove_file 'app/assets/stylesheets/simple.css'
             remove_file 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
           when 'foundation5'
-            copy_file 'foundation5_and_overrides.css.scss', 'app/assets/stylesheets/framework_and_overrides.css.scss'
+            copy_file 'foundation5_and_overrides.css.scss', 'app/assets/stylesheets/1st_load_framework.css.scss'
             copy_file 'foundation5-application.js', 'app/assets/javascripts/application.js'
             remove_file 'app/assets/stylesheets/simple.css'
             remove_file 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
@@ -65,11 +65,11 @@ module Layout
           when 'bootstrap2'
             # TODO
           when 'bootstrap3'
-            append_file 'app/assets/stylesheets/framework_and_overrides.css.scss', File.read("#{dir}/bootstrap3-forms.css.scss")
+            append_file 'app/assets/stylesheets/1st_load_framework.css.scss', File.read("#{dir}/bootstrap3-forms.css.scss")
           when 'foundation4'
             # TODO
           when 'foundation5'
-            append_file 'app/assets/stylesheets/framework_and_overrides.css.scss', File.read("#{dir}/foundation5-forms.css.scss")
+            append_file 'app/assets/stylesheets/1st_load_framework.css.scss', File.read("#{dir}/foundation5-forms.css.scss")
         end
       end
 

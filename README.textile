@@ -119,7 +119,9 @@ The command will rename *application.css* to *application.css.scss*.
 
 It will add:
 
-* *framework_and_overrides.css.scss*
+* *1st_load_framework.css.scss*
+
+The Rails asset pipeline loads asset files in alphabetical order (unless the assets are specified explicitly in the manifest file). The file is named @1st_load_framework.css.scss@ so the framework will be loaded first before any custom CSS files added by the developer.
 
 And modify the JavaScript asset file:
 
@@ -209,7 +211,7 @@ See the files that are generated:
 
 The RailsLayout gem will create the file:
 
-* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation5_and_overrides.css.scss
+* "app/assets/stylesheets/1st_load_framework.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation5_and_overrides.css.scss
 
 and modify the file:
 
@@ -256,7 +258,7 @@ See the files that are generated:
 
 The RailsLayout gem will create the file:
 
-* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation4_and_overrides.css.scss
+* "app/assets/stylesheets/1st_load_framework.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/foundation4_and_overrides.css.scss
 
 and modify the file:
 
@@ -284,7 +286,7 @@ See the files that are generated:
 
 The RailsLayout gem will create the file:
 
-* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/bootstrap3_and_overrides.css.scss
+* "app/assets/stylesheets/1st_load_framework.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/bootstrap3_and_overrides.css.scss
 
 and modify the file:
 
@@ -312,7 +314,7 @@ See the files that are generated:
 
 The RailsLayout gem will create the file:
 
-* "app/assets/stylesheets/framework_and_overrides.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/bootstrap2_and_overrides.css.scss
+* "app/assets/stylesheets/1st_load_framework.css.scss":https://github.com/RailsApps/rails_layout/blob/master/lib/generators/layout/install/templates/bootstrap2_and_overrides.css.scss
 
 and modify the file:
 
@@ -358,7 +360,7 @@ The RailsLayout gem will remove any files it may have added:
 * app/assets/stylesheets/simple.css
 * app/assets/stylesheets/bootstrap_and_overrides.css.scss
 * app/assets/stylesheets/foundation_and_overrides.css.scss
-* app/assets/stylesheets/framework_and_overrides.css.scss
+* app/assets/stylesheets/1st_load_framework.css.scss
 
 Additionally, it will restore these files to the default versions:
 
