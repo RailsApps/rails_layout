@@ -18,7 +18,7 @@ module Layout
         append_file 'app/views/layouts/_navigation_links.html.erb', "<li><%= link_to 'Contact', new_contact_path %></li>\n" if File.exists?("app/views/contacts/new.html.#{ext}")
         # DEVISE
         if File.exists?('config/initializers/devise.rb')
-          append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
+          create_file 'app/views/layouts/_nav_links_for_auth.html.erb' do <<-LINKS
 <% if user_signed_in? %>
   <li><%= link_to 'Edit account', edit_user_registration_path %></li>
   <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
@@ -31,7 +31,7 @@ LINKS
         end
         # OMNIAUTH
         if File.exists?('config/initializers/omniauth.rb')
-          append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
+          create_file 'app/views/layouts/_nav_links_for_auth.html.erb' do <<-LINKS
 <% if user_signed_in? %>
   <li><%= link_to 'Sign out', signout_path %></li>
 <% else %>
@@ -44,7 +44,7 @@ LINKS
         if Dir.glob("app/views/users/index.html.{#{ext},erb}").any?
           if User.column_names.include? 'role'
             # suitable for role-based authorization
-            append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
+            append_file 'app/views/layouts/_nav_links_for_auth.html.erb' do <<-LINKS
 <% if user_signed_in? %>
   <% if current_user.try(:admin?) %>
     <li><%= link_to 'Users', users_path %></li>
@@ -54,7 +54,7 @@ LINKS
             end
           else
             # suitable for simple authentication
-            append_file 'app/views/layouts/_navigation_links.html.erb' do <<-LINKS
+            append_file 'app/views/layouts/_nav_links_for_auth.html.erb' do <<-LINKS
 <% if user_signed_in? %>
   <li><%= link_to 'Users', users_path %></li>
 <% end %>
@@ -65,8 +65,16 @@ LINKS
         # UPMIN (administrative dashboard)
         if File.exists?('config/initializers/upmin.rb')
           navlink = "    <li><%= link_to 'Admin', '/admin' %></li>"
-          inject_into_file 'app/views/layouts/_navigation_links.html.erb', navlink + "\n", :after => "<% if current_user.try(:admin?) %>\n"
+          inject_into_file 'app/views/layouts/_nav_links_for_auth.html.erb', navlink + "\n", :after => "<% if current_user.try(:admin?) %>\n"
         end
+      end
+
+      def modify_layout_for_auth_links
+        return unless File.exists?('app/views/layouts/_nav_links_for_auth.html.erb')
+        app = ::Rails.application
+        ext = app.config.generators.options[:rails][:template_engine] || :erb
+        partial = "<%= render 'layouts/navigation_links' %>\n                <%= render 'layouts/nav_links_for_auth' %>"
+        gsub_file "app/views/layouts/_navigation.html.#{ext}", /<%= render 'layouts\/navigation_links' %>/, partial
       end
 
       def add_tests
