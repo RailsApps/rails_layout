@@ -73,7 +73,7 @@ LINKS
         return unless File.exists?('app/views/layouts/_nav_links_for_auth.html.erb')
         app = ::Rails.application
         ext = app.config.generators.options[:rails][:template_engine] || :erb
-        partial = "<%= render 'layouts/navigation_links' %>\n                <%= render 'layouts/nav_links_for_auth' %>"
+        partial = "<%= render 'layouts/navigation_links' %>\n        <%= render 'layouts/nav_links_for_auth' %>"
         gsub_file "app/views/layouts/_navigation.html.#{ext}", /<%= render 'layouts\/navigation_links' %>/, partial
       end
 
