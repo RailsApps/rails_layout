@@ -67,6 +67,13 @@ LINKS
           navlink = "    <li><%= link_to 'Admin', '/admin' %></li>"
           inject_into_file 'app/views/layouts/_nav_links_for_auth.html.erb', navlink + "\n", :after => "<% if current_user.try(:admin?) %>\n"
         end
+        # ADMINSTRATE (administrative dashboard)
+        if File.exists?('config/railscomposer.yml')
+          if Rails.application.config_for(:railscomposer)['dashboard'] == 'administrate'
+            navlink = "    <li><%= link_to 'Admin', '/admin' %></li>"
+            inject_into_file 'app/views/layouts/_nav_links_for_auth.html.erb', navlink + "\n", :after => "<% if current_user.try(:admin?) %>\n"
+          end
+        end
       end
 
       def modify_layout_for_auth_links

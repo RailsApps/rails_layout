@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.29 November 23, 2015
+
+* add navlink for an admin interface if Thoughbot Administrate gem was selected in Rails Composer
+
 h3. 1.0.28 November 4, 2015
 
 * move navigation auth links to a new partial 'app/views/layouts/_nav_links_for_auth.html.erb'
