@@ -37,6 +37,11 @@ module Layout
             copy_file 'bootstrap-application.js', 'app/assets/javascripts/application.js'
             remove_file 'app/assets/stylesheets/simple.css'
             remove_file 'app/assets/stylesheets/foundation_and_overrides.css.scss'
+          when 'bootstrap4'
+            copy_file 'bootstrap4_and_overrides.css.scss', 'app/assets/stylesheets/1st_load_framework.css.scss'
+            copy_file 'bootstrap-application.js', 'app/assets/javascripts/application.js'
+            remove_file 'app/assets/stylesheets/simple.css'
+            remove_file 'app/assets/stylesheets/foundation_and_overrides.css.scss'
           when 'foundation4'
             copy_file 'foundation4_and_overrides.css.scss', 'app/assets/stylesheets/1st_load_framework.css.scss'
             copy_file 'foundation4-application.js', 'app/assets/javascripts/application.js'
@@ -66,6 +71,8 @@ module Layout
             # TODO
           when 'bootstrap3'
             append_file 'app/assets/stylesheets/1st_load_framework.css.scss', File.read("#{dir}/bootstrap3-forms.css.scss")
+          when 'bootstrap4'
+            append_file 'app/assets/stylesheets/1st_load_framework.css.scss', File.read("#{dir}/bootstrap4-forms.css.scss")
           when 'foundation4'
             # TODO
           when 'foundation5'
