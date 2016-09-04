@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.30 September 4, 2016
+
+* add support for Bootstrap 4
+
 h3. 1.0.29 November 23, 2015
 
 * add navlink for an admin interface if Thoughbot Administrate gem was selected in Rails Composer
