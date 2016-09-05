@@ -102,7 +102,21 @@ module Layout
       end
 
       # Add navigation links
+      def add_navigation_links_for_bootstrap4
+        return unless framework_name == bootstrap4
+        app = ::Rails.application
+        ext = app.config.generators.options[:rails][:template_engine] || :erb
+        unless framework_name == 'none'
+          # ABOUT
+          append_file 'app/views/layouts/_navigation_links.html.erb', "<li class=\"nav-item\"><%= link_to 'About', page_path('about') %>, class: 'nav-link' %></li>\n" if File.exists?("app/views/pages/about.html.#{ext}")
+          # CONTACT
+          append_file 'app/views/layouts/_navigation_links.html.erb', "<li class=\"nav-item\"><%= link_to 'Contact', new_contact_path %>, class: 'nav-link' %></li>\n" if File.exists?("app/views/contacts/new.html.#{ext}")
+        end
+      end
+
+      # Add navigation links
       def add_navigation_links
+        return if framework_name == bootstrap4
         app = ::Rails.application
         ext = app.config.generators.options[:rails][:template_engine] || :erb
         unless framework_name == 'none'
