@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.31 September 6, 2016
+
+* additional support for Bootstrap 4 (form styling)
+
 h3. 1.0.30 September 4, 2016
 
 * add support for Bootstrap 4
