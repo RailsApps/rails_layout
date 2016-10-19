@@ -5,8 +5,8 @@ html
     title
       = content_for?(:title) ? yield(:title) : '<%= app_name.underscore.titleize %>'
     meta name="description" content="#{content_for?(:description) ? yield(:description) : '<%= app_name.underscore.titleize %>'}"
-    == stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => true
-    == javascript_include_tag 'application', 'data-turbolinks-track' => true
+    == stylesheet_link_tag "application", :media => 'all', 'data-turbolinks-track' => reload
+    == javascript_include_tag 'application', 'data-turbolinks-track' => reload
     == csrf_meta_tags
   body
     / application layout styled for Bootstrap 2.3
