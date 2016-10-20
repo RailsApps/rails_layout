@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.33 October 20, 2016
+
+* data-turbolinks-track 'reload' requires double quotation marks
+
 h3. 1.0.32 October 19, 2016
 
 * change data-turbolinks-track 'true' to 'reload' for TurboLinks 5
