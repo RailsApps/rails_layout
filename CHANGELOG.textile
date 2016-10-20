@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.34 October 20, 2016
+
+* try single quotes for data-turbolinks-track 'reload'
+
 h3. 1.0.33 October 20, 2016
 
 * data-turbolinks-track 'reload' requires double quotation marks
