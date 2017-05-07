@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.35 May 7, 2017
+
+* update application.js for Rails 5.1
+
 h3. 1.0.34 October 20, 2016
 
 * try single quotes for data-turbolinks-track 'reload'
