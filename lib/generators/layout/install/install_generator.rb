@@ -63,7 +63,7 @@ module Layout
         if Rails::VERSION::MAJOR == 4
           gsub_file 'app/assets/javascripts/application.js', /\/\/= require rails-ujs/, '//= require jquery_ujs'
         end
-        if Rails::VERSION::MAJOR == 5 && Rails::VERSION::MINOR >= 0
+        if Rails::VERSION::MAJOR == 5 && Rails::VERSION::MINOR == 0
           gsub_file 'app/assets/javascripts/application.js', /\/\/= require rails-ujs/, '//= require jquery_ujs'
         end
       end
