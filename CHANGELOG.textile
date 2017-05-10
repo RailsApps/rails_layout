@@ -7,7 +7,6 @@ h3. 1.0.39 May 10, 2017
 h3. 1.0.38 May 10, 2017
 
 * jQuery is required for Bootstrap or Foundation
-* Rails 5.1 uses 'rails-ujs' but earlier versions need 'jquery_ujs'
 
 h3. 1.0.37 May 7, 2017
 
