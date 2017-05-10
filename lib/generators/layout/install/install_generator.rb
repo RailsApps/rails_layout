@@ -54,8 +54,17 @@ module Layout
             remove_file 'app/assets/stylesheets/bootstrap_and_overrides.css.scss'
             insert_into_file('config/application.rb', "\n\n    # For Foundation 5\n    config.assets.precompile += %w( vendor/modernizr )\n", :after => /^ *# config.i18n.default_locale = :de/, :force => false)
         end
-        if Rails::VERSION::MAJOR.to_s == "3"
+        # Rails 3 doesn't have turbolinks
+        # Rails 5.1 uses rails-ujs but earlier versions need jquery_ujs
+        if Rails::VERSION::MAJOR == 3
           gsub_file 'app/assets/javascripts/application.js', /\/\/= require turbolinks\n/, ''
+          gsub_file 'app/assets/javascripts/application.js', /\/\/= require rails-ujs/, '//= require jquery_ujs'
+        end
+        if Rails::VERSION::MAJOR == 4
+          gsub_file 'app/assets/javascripts/application.js', /\/\/= require rails-ujs/, '//= require jquery_ujs'
+        end
+        if Rails::VERSION::MAJOR == 5 && Rails::VERSION::MINOR >= 0
+          gsub_file 'app/assets/javascripts/application.js', /\/\/= require rails-ujs/, '//= require jquery_ujs'
         end
       end
 
