@@ -1,5 +1,9 @@
 h1. CHANGELOG
 
+h3. 1.0.41 May 17, 2017
+
+* update from Bootstrap 4 alpha 4 to 6
+
 h3. 1.0.40 May 10, 2017
 
 * match precisely Rails 5.0 to use 'jquery_ujs'
