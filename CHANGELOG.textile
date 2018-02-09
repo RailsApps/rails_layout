@@ -1,5 +1,12 @@
 h1. CHANGELOG
 
+
+h3. 1.0.42 February 9, 2018
+
+* Bootstrap 4 was released Jan 18, 2018
+* change @extend .bg-faded; to @extend .bg-light; for Bootstrap 4 forms (fix https://github.com/RailsApps/rails-composer/issues/273)
+* specify 'popper' and 'jquery3' in Bootstrap 4 *application.js* file
+
 h3. 1.0.41 May 17, 2017
 
 * update from Bootstrap 4 alpha 4 to 6

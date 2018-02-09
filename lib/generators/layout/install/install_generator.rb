@@ -39,7 +39,7 @@ module Layout
             remove_file 'app/assets/stylesheets/foundation_and_overrides.css.scss'
           when 'bootstrap4'
             copy_file 'bootstrap4_and_overrides.css.scss', 'app/assets/stylesheets/1st_load_framework.css.scss'
-            copy_file 'bootstrap-application.js', 'app/assets/javascripts/application.js'
+            copy_file 'bootstrap4-application.js', 'app/assets/javascripts/application.js'
             remove_file 'app/assets/stylesheets/simple.css'
             remove_file 'app/assets/stylesheets/foundation_and_overrides.css.scss'
           when 'foundation4'
